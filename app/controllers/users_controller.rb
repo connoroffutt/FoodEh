@@ -7,15 +7,16 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      auto_login(@user)
-      redirect_to projects_url
+      flash[:alert] = "Account Creation Successful!"
+      redirect_to (login_path)
     else
+      # byebug
       render 'new'
     end
   end
 
   def show
-    @user = Use.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -26,6 +27,6 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password_digest, :bio, :address)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :bio, :address)
   end
 end
