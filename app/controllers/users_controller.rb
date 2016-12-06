@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:alert] = "Account Creation Successful!"
-      redirect_to (login_path)
+      redirect_to (root_path)
     else
       # byebug
       render 'new'

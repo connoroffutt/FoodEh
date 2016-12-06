@@ -1,5 +1,6 @@
 <h1>Cuisines</h1>
 
 <% @cuisines.each do |cuisine| %>
-  <p><%= cuisine.name %></p>
+
+  <p><%= link_to cuisine.name, "/cuisines/#{cuisine.id}" %></p>
 <% end %>
