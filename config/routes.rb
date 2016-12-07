@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :cuisines, only: [:index, :show]
   resources :users, only: [:new, :create, :show]
   resources :user_sessions, only: [:new, :create, :destroy]
-  resources :recipes, only: [:index, :show]
+  resources :recipes, only: [:index, :show, :create]
   resources :list, only: [:show]
 
   get 'login' => 'user_sessions#new', :as => :login
