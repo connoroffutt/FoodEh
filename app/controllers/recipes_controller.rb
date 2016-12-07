@@ -4,8 +4,8 @@ class RecipesController < ApplicationController
 
     # @recipes = Recipe.search(params[:search])
 
-    @search_term = params[:looking_for] || 'chocolate'
-    @recipes = Recipe.for(@search_term)
+    @get_term = params[:looking_for] || 'chicken'
+    @recipes = Recipe.for(@get_term)
 
   end
 
