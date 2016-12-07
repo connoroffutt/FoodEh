@@ -7,6 +7,13 @@
   </p>
 <% end %> -->
 
+<form <%= @search_term %> >
+  <input type="text" placeholder="Search..." required>
+  <input type="button" value="Search">
+</form>
+
+
+
 <h1>Searching for - <%= @search_term %></h1>
 <p>Powered By Food2Fork.com</p>
 <% if (@recipes.nil? or @recipes == []) %>
