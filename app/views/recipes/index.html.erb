@@ -1,11 +1,17 @@
 <h1>Recipes</h1>
-
+<!-- 
 <%= form_tag recipes_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<% end %>
+<% end %> -->
+
+<%= form_for @get_term do |f| %>
+   <%= f.label      :looking_for %>
+   <%= f.text_field :looking_for %>
+ <%= f.submit %>
+ <% end %>
 
 
 <h1>Searching for - <%= @get_term %></h1>
