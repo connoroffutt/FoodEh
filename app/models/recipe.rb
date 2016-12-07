@@ -17,5 +17,7 @@ class Recipe < ApplicationRecord
        get("/search", query: {q: term})["recipes"]
      end
 
-
+    #  def self.for term
+    #    get("/get"), query: {q: term})["recipes"]
+    #  end
 end
