@@ -1,17 +1,12 @@
-<!-- <h1>Recipes</h1>
+<h1>Recipes</h1>
 
-<% form_tag recipes_path, :method => 'get' do %>
+<%= form_tag recipes_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<% end %> -->
-
-<%= form_for @get_term do |f| %>
-  <%= f.label      :looking_for %>
-  <%= f.text_field :looking_for %>
-<%= f.submit %>
 <% end %>
+
 
 
 <h1>Searching for - <%= @get_term %></h1>
@@ -25,13 +20,14 @@
  <th>Image</th>
  <th>Name</th>
  <th>Rank</th>
- <th>Ingredients</th>
+ <th>IDs</th>
  </tr>
  <% @recipes.each do |course| %>
  <tr class=<%= cycle('even', 'odd') %>>
  <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
  <td><%= link_to(course["title"], course["f2f_url"]) %></td>
  <td><%= course["social_rank"] %></td>
+ <td><%= course["recipe_id"] %></td>
  <td><%= course["ingredients"] %></td>
  </tr>
  <% end %>
