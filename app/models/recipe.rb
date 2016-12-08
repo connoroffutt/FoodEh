@@ -8,6 +8,7 @@ class Recipe < ApplicationRecord
   belongs_to :users
   has_many :users
 
+
   include HTTParty
 
 
@@ -24,6 +25,7 @@ class Recipe < ApplicationRecord
   def self.get_recipe(id)
     get("/get", query: {rId: id})["recipe"]
   end
+
 
 
 
