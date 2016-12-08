@@ -12,10 +12,15 @@ class RecipesController < ApplicationController
       else
     @recipes = Recipe.for(@get_term)
     end
-  end
+
+    # @get_id = params[:get]
+    # @recipes = Recipe.for(@get_id)
+    end
+
 
   def show
-
+    @get_id = params[:id]
+    @recipes = Recipe.get_recipe(@get_id)
   end
 
   def create
