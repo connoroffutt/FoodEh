@@ -14,7 +14,12 @@ class RecipesController < ApplicationController
         @recipes == []
       else
         @recipes = Recipe.for(@get_term)
+
       end
+
+    # @get_id = params[:get]
+    # @recipes = Recipe.for(@get_id)
+
 
   end
 
