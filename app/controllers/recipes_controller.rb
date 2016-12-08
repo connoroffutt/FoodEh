@@ -10,12 +10,12 @@ class RecipesController < ApplicationController
       elsif @get_term.empty?
         @recipes == []
       else
-    @recipes = Recipe.for(@get_term)
+        @recipes = Recipe.for(@get_term)
     end
 
     # @get_id = params[:get]
     # @recipes = Recipe.for(@get_id)
-    end
+  end
 
 
   def show
