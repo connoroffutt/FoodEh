@@ -1,11 +1,10 @@
 
 <h1>Recipes</h1>
-  <p>Search by Recipe or Ingredient</p>
-<%= form_tag recipes_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :get, params[:get] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
 
+<<<<<<< HEAD
   <%= @recipes %>
 <% end %>
+=======
+
+<%= @recipes["ingredients"] %>
+>>>>>>> 955b96c0ca6027594f4a6e0be515e8d73b2236cc
