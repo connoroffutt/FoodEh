@@ -25,7 +25,20 @@
  <% @recipes.each do |course| %>
  <tr class=<%= cycle('even', 'odd') %>>
  <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
+
+
+
+
+ <td><%= link_to(course["title"], course[""]) %></td>
+
+
+
+
+
+
+
  <td><%= link_to(course["title"], course["f2f_url"]) %></td>
+
  <td><%= course["social_rank"] %></td>
  <td><%= course["recipe_id"] %></td>
  <td><%= course["ingredients"] %></td>
