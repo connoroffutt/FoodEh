@@ -6,5 +6,5 @@ module F2fapiHelper
   base_uri 'http://food2fork.com/api'
   default_params key: ENV["FOOD2FORK_KEY"]
   format :json
-  
+
 end
