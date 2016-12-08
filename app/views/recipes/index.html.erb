@@ -23,27 +23,16 @@
  <th>ID</th>
  </tr>
 
-  <% @recipes.each do |course| %>
-     <tr class=<%= cycle('even', 'odd') %>>
-     <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
+ <% @recipes.each do |recipe| %>
+ <tr class=<%= cycle('even', 'odd') %>>
+ <td><%= link_to(image_tag(recipe["image_url"], height: '100', width: '100'), "/recipes/#{recipe["recipe_id"]}")%></td>
+ <td><%= link_to(recipe["title"], "/recipes/#{recipe["recipe_id"]}") %></td>
+ <td><%= recipe["social_rank"] %></td>
+ <td><%= recipe["recipe_id"] %></td>
+ <td><%= recipe["ingredients"] %></td>
 
+ </tr>
+ <% end %>
 
-
-
-     <td><%= link_to(course["title"], course["recipe_url(@recipes.get_recipe[:get_id])"]) %></td>
-
-
-
-
-
-
-
-     <td><%= link_to(course["title"], course["f2f_url"]) %></td>
-
-     <td><%= course["social_rank"] %></td>
-     <td><%= course["recipe_id"] %></td>
-     <td><%= course["ingredients"] %></td>
-     </tr>
-  <% end %>
 </table>
 <% end %>
