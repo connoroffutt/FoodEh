@@ -1,23 +1,18 @@
 <h1>Recipes</h1>
-<!-- 
+  <p>Search by Recipe or Ingredient</p>
 <%= form_tag recipes_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<% end %> -->
-
-<%= form_for @get_term do |f| %>
-   <%= f.label      :looking_for %>
-   <%= f.text_field :looking_for %>
- <%= f.submit %>
  <% end %>
+
 
 
 <h1>Searching for - <%= @get_term %></h1>
 <p>Powered By Food2Fork.com</p>
 <% if (@recipes.nil? or @recipes == []) %>
-<p> <h2>No recipes found.. Sorry</h2></p>
+<p> <h2>No recipes found... Please search again!</h2></p>
 <% else %>
 
 <table border="1">
@@ -25,7 +20,7 @@
  <th>Image</th>
  <th>Name</th>
  <th>Rank</th>
- <th>IDs</th>
+ <th>ID</th>
  </tr>
  <% @recipes.each do |course| %>
  <tr class=<%= cycle('even', 'odd') %>>
