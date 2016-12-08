@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
     # @recipes = Recipe.search(params[:search])
 
+
     @get_term = params[:looking_for] || 'chicken'
     @recipes = Recipe.for(@get_term)
 
@@ -19,7 +20,11 @@ class RecipesController < ApplicationController
   end
 
   def show
-
+    @get_id = params[:id]
+    @recipes = Recipe.get_recipe(@get_id)
+    
+    # @get_id = params[:get]
+    # @recipes = Recipe.for(@get_id)
   end
 
   def create
