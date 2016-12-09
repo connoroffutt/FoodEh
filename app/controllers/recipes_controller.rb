@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   def show
     @get_id = params[:id]
     @recipes = Recipe.get_recipe(@get_id)
-
+    # @recipe_ingredients = @recipes["ingredients"]
   end
 
 
