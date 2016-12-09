@@ -1,14 +1,11 @@
 <h1>Cuisines</h1>
 
-  <!-- <% @cuisines.each do |cuisine| %>
+  <% @cuisines.each do |cuisine| %>
 
     <p><%= link_to cuisine.name, "/cuisines/#{cuisine.id}" %></p>
 
+  <% end %>
 
-  <% end %> -->
-
-<html>
-<body>
 
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=American"><%= "American"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=British"><%= "British"%></a>
@@ -29,20 +26,3 @@
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Spanish"><%= "Spanish"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Thai"><%= "Thai"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Vietnamese"><%= "Vietnamese"%></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
->>>>>>> b4660196ff60241f56a9a5fba7699ca85545f8dd
