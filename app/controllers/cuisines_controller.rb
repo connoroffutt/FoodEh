@@ -8,4 +8,6 @@ class CuisinesController < ApplicationController
     @cuisine = Cuisine.find(params[:id])
   end
 
+
+
 end
