@@ -3,10 +3,11 @@
 
 
 <h2><%= @recipes["title"]%></h2>
+  <img><%= link_to(image_tag(@recipes["image_url"], height: '240', width: '240'))%></img>
 
 
 
 
  <% @recipes["ingredients"].each do |i| %>
-  <li><%= i %></li>  
+  <li><%= i %></li>
  <%end%>
