@@ -1,39 +1,5 @@
 <h1>Cuisines</h1>
-<html>
-<body>
 
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=American"><%= "American"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=British"><%= "British"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Cajun"><%= "Cajun"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Carribean"><%= "Carribean"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Chinese"><%= "Chinese"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Filipino"><%= "Filipino"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=French"><%= "French"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Greek"><%= "Greek"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Homestyle"><%= "Homestyle"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Indian"><%= "Indian"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Italian"><%= "Italian"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Japanese"><%= "Japanese"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Korean"><%= "Korean"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Mexican"><%= "Mexican"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Slavic"><%= "Slavic"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=South+American"><%= "South American"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Spanish"><%= "Spanish"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Thai"><%= "Thai"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Vietnamese"><%= "Vietnamese"%></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+<% @cuisines.each do |cuisine| %>
+   <p><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}", class:"button" %></p>
+<% end %>
