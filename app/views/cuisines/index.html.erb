@@ -1,6 +1,7 @@
 <h1>Cuisines</h1>
 
 <% @cuisines.each do |cuisine| %>
-
   <p><%= link_to cuisine.name, "/cuisines/#{cuisine.id}" %></p>
 <% end %>
+
+<%= button_to "Italian", action: "searchItalian" %>
