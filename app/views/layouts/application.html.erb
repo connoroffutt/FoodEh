@@ -16,7 +16,7 @@
       <h1 class="logo">FoodEh</h1>
       <nav class="site-nav">
               <% if current_user %>
-                <%= link_to "Logout", :logout, method: :post %> </br></br>
+                Signed in as <%= current_user.first_name %>. <%= link_to "Logout", :logout, method: :post %> </br></br>
               <% else %>
                 <%= link_to "Register", new_user_path %> |
                 <%= link_to "Login", :login %></br></br>
