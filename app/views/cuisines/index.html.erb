@@ -1,12 +1,22 @@
 <h1>Cuisines</h1>
 
+  <!-- <% @cuisines.each do |cuisine| %> -->
+
+    <!-- <p><%= link_to cuisine.name, "/cuisines/#{cuisine.id}" %></p> -->
+
+    <!-- <p>
+      <%= button_to cuisine.name, recipe_path("#{:id}") %>
+        <form method="get" action="/recipes/#{recipe['recipe_id']}" class="button_to">
+        </form>
+    </p>
+
+
+  <% end %> -->
+
   <% @cuisines.each do |cuisine| %>
-
-    <p><%= link_to cuisine.name, "/cuisines/#{cuisine.id}" %></p>
-
+  <p><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}", class:"button" %></p>
   <% end %>
-
-
+<!--
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=American"><%= "American"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=British"><%= "British"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Cajun"><%= "Cajun"%></a>
@@ -25,4 +35,4 @@
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=South+American"><%= "South American"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Spanish"><%= "Spanish"%></a>
    <a class="button" href="/recipes?utf8=%E2%9C%93&search=Thai"><%= "Thai"%></a>
-   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Vietnamese"><%= "Vietnamese"%></a>
+   <a class="button" href="/recipes?utf8=%E2%9C%93&search=Vietnamese"><%= "Vietnamese"%></a> -->
