@@ -5,8 +5,7 @@ class Recipe < ApplicationRecord
   has_many :ingredients
   belongs_to :cuisines
   has_many :cuisines
-  belongs_to :users
-  has_many :users
+  has_many :users, through: :favorites
 
 
 
