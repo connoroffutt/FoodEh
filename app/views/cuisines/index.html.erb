@@ -1,6 +1,7 @@
 <h1>Cuisines</h1>
 
 
+
 <% @cuisines.each do |cuisine| %>
    <p><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}", class:"button" %></p>
 <% end %>
