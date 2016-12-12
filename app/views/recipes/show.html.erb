@@ -12,4 +12,4 @@
  <li><%= i.description %></li>
  <% end %>
 
- 
+ <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
