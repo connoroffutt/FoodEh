@@ -2,8 +2,6 @@ class List < ApplicationRecord
 
   has_one :user
   belongs_to :user
-  has_many :ingredients
-  belongs_to :ingredients
-
+  has_and_belongs_to_many :ingredients
 
 end

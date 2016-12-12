@@ -1,9 +1,8 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  has_one :list
-  has_many :recipes
-  belongs_to :recipes
+
+  has_many :recipes, through: :favorites
 
   validates :password, length: { minimum: 3 }, on: :create
   validates :password, confirmation: true, on: :create
