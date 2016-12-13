@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :recipes, only: [:index, :show, :create]
-  resources :favorites, only: [:create, :destroy]
-  
+  resources :favorites, only: [:create, :show, :destroy]
+
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
