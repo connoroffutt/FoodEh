@@ -1,0 +1,11 @@
+</br>
+Favorite Recipe: <%= @favorites.recipe.name %>
+</br>
+</br>
+Recipe Ingredients:
+</br> <% @favorites.recipe.ingredients.each do |x| %>
+                      <li> <%= x.description %> </li>
+                    <% end %>
+</br>
+
+<%= link_to 'Remove from favorites', favorite_path(favorite_id: @favorite), method: :delete %>
