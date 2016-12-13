@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   resources :favorites, only: [:create, :show, :destroy]
 
 
+
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  post '/list/:id/add' => 'lists#add'
+  post '/list/add' => 'lists#add', :as => :list_add
 
 
 

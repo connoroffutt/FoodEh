@@ -3,7 +3,9 @@ class User < ApplicationRecord
 
 
 
+
   has_many :favorites
+  has_one :list
   has_many :recipes, through: :favorites
 
   validates :password, length: { minimum: 3 }, on: :create
