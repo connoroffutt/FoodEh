@@ -16,4 +16,16 @@ before_action :require_login
 
   end
 
+  def show
+    @favorites = Favorite.find(params[:id])
+  end
+
+  def destroy
+    favorite = Favorite.find(params[:id])
+    favorite.destroy
+    flash[:alert] = "Recipe removed from favorites!"
+    redirect_to (root_path)
+  end
+
+
 end
