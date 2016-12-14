@@ -5,8 +5,8 @@
   <% @recipe.ingredients.each do |i| %>
     <li prep="ingredients"><%= i.description %></li>
     <%= form_for(i, url: list_add_url, html:{method: "post"}) do |f| %>
-      <%= f.submit %>
-      <%= f.hidden_field(:ingredient_id, value: i.id)%>
+      <!-- <%= f.submit %> -->
+      <input type="submit" name="commit" value="Add Ingredient"><%= f.hidden_field(:ingredient_id, value: i.id)%></input>
     <% end %>
   <% end %>
 </ul>
