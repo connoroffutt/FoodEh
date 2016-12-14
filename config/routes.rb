@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
   post '/list/add' => 'lists#add', :as => :list_add
+  delete '/list/:ingredient_id' => 'lists#destroy', :as => :list_destroy
 
 
 

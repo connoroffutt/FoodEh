@@ -5,4 +5,6 @@ class ListsController < ApplicationController
 
     redirect_to(user_path(current_user))
   end
+  def destroy
+  end 
 end
