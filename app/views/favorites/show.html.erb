@@ -1,5 +1,6 @@
 </br>
-Favorite Recipe: <%= @favorites.recipe.name %>
+Favorite Recipe: <%= link_to(@favorites.recipe.name, "/recipes/#{@favorites.recipe.f2f_id}") %>
+
 </br>
 </br>
 Recipe Ingredients:
