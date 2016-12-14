@@ -8,3 +8,7 @@
     <li><%=link_to favorite.recipe.name, favorite_path(favorite.id)%></li>
    <br>
    <% end %>
+
+   <% current_user.list.ingredients.each do |i|%>
+    <li><%= i.description %></li>
+   <% end %>
