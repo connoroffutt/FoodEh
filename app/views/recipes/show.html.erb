@@ -2,11 +2,11 @@
 <h1><%= @recipe.name %></h1>
 
 <ul>
-  <% @recipe.ingredients.each do |i| %>
-    <li prep="ingredients"><%= i.description %></li>
-    <%= form_for(i, url: list_add_url, html:{method: "post"}) do |f| %>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <li class="ingredients"><%= ingredient.description %></li>
+    <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
       <%= f.submit(value: "add") %>
-      <%= f.hidden_field(:ingredient_id, value: i.id)%>
+      <%= f.hidden_field(:ingredient_id, value: ingredient.id)%>
     <% end %>
   <% end %>
 </ul>

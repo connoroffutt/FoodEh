@@ -9,6 +9,13 @@
    <br>
    <% end %>
 
-   <% current_user.list.ingredients.each do |i|%>
-    <li><%= i.description %></li>
-   <% end %>
+<h2> Your Grocery List </h2>
+
+     <% current_user.list.ingredients.each do |ingredient| %>
+       <li class="ingredients"><%= ingredient.description %><button class="destroy_ingredient">delete</button></li>
+       <%= form_for(ingredient, url: list_destroy_ingredient_url, html:{method: "delete"}) do |f| %>
+         <%= f.submit(value: "delete") %>
+         <%= f.hidden_field(:ingredient_id, value: ingredient.id)%>
+       <% end %>
+     <% end %>
+     <% end %>
