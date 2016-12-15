@@ -12,7 +12,11 @@
   <body>
 
     <header class='site-header'>
-      <h1 class="logo">FoodEh</h1>
+      <h1 class="logo"><video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video></h1>
       <nav class="site-nav">
               <% if current_user %>
                 <p class="nav-text">Signed in as: <%= current_user.first_name %></p></br></br>
@@ -21,7 +25,7 @@
                 <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
                 <%= link_to "Cuisines", cuisines_path, class: "nav-button" %> </br></p>
               <% else %>
-                <%= link_to "Register", new_user_path, class: "nav-button" %> 
+                <%= link_to "Register", new_user_path, class: "nav-button" %>
                 <%= link_to "Login", :login, class: "nav-button" %></br></br>
               <% end %>
           </nav>
