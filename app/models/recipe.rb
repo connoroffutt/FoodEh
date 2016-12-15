@@ -9,15 +9,17 @@ class Recipe < ApplicationRecord
 
 
   def self.for(term)
-    get("/search", query: {q: term})["recipes"]
+    # get("/search", query: {q: term})["recipes"]
+    JSON.parse(File.read("#{Rails.root}/public/search.json"))["recipes"]
   end
 
   def self.get_recipe(id)
-   data = get("/get", query: {rId: id})["recipe"]
-   recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"])
-   data["ingredients"].each do |i|
-     recipe.ingredients.create!(description: i)
-   end
-   recipe
+    #  data = get("/get", query: {rId: id})["recipe"]
+    data = JSON.parse(File.read("#{Rails.root}/public/#{id}.json"))["recipes"]
+    recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"])
+    data["ingredients"].each do |i|
+      recipe.ingredients.create!(description: i)
+    end
+    recipe
   end
 end
