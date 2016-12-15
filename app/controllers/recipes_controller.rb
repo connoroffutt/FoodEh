@@ -2,6 +2,7 @@
 class RecipesController < ApplicationController
 
   def index
+    # binding.pry
     @get_term = params[:search]
       if @get_term == nil
         @recipes == []
@@ -9,6 +10,7 @@ class RecipesController < ApplicationController
         @recipes == []
       else
         @recipes = Recipe.for(@get_term)
+        # binding.pry
       end
   end
 
@@ -21,5 +23,5 @@ class RecipesController < ApplicationController
   def create
 
   end
-  
+
 end
