@@ -12,14 +12,11 @@
   <body>
 
     <header class='site-header'>
-      <h1 class="logo"><video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video></h1>
+      <div class="logo"><img src="assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
       <nav class="site-nav">
+          <img src="assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
               <% if current_user %>
-                <p class="nav-text">Signed in as: <%= current_user.first_name %></p></br></br>
+                <p class="nav-text">Signed in as: <%= current_user.first_name %></p>
                 <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
                 <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
                 <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
