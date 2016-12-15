@@ -15,13 +15,14 @@
       <h1 class="logo">FoodEh</h1>
       <nav class="site-nav">
               <% if current_user %>
-                Signed in as <%= current_user.first_name %> - <%= link_to "Logout", :logout, method: :post %> </br></br>
-                <%= link_to "My Profile", user_path(current_user.id) %> -
-                <%= link_to "Recipe Search", recipes_path %> -
-                <%= link_to "Cuisines", cuisines_path %> </br>
+                <p class="nav-text">Signed in as: <%= current_user.first_name %></p></br></br>
+                <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
+                <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
+                <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
+                <%= link_to "Cuisines", cuisines_path, class: "nav-button" %> </br></p>
               <% else %>
-                <%= link_to "Register", new_user_path %> |
-                <%= link_to "Login", :login %></br></br>
+                <%= link_to "Register", new_user_path, class: "nav-button" %> 
+                <%= link_to "Login", :login, class: "nav-button" %></br></br>
               <% end %>
           </nav>
     </header>
