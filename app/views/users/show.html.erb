@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+  <div class="site-header"></div>
 
 <h1> Welcome to your FoodEh profile <%= current_user.first_name %>! </h1>
 
@@ -33,16 +34,15 @@
 
      <% current_user.list.ingredients.each do |ingredient| %>
        <li class="ingredients"><%= ingredient.description %><button class="destroy_ingredient">delete</button></li>
-       <%= form_for(ingredient, url: list_destroy_ingredient_url, html:{method: "delete"}) do |f| %>
+       <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
          <%= f.submit(value: "delete") %>
          <%= f.hidden_field(:ingredient_id, value: ingredient.id)%>
        <% end %>
      <% end %>
-     <% end %>
 
 
 
-<h2> Grocery Stores Nearby </h2>
+<h2 class="map-topper"> Grocery Stores Nearby </h2>
    <div id="map"></div>
 
 <script>

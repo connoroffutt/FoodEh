@@ -1,35 +1,26 @@
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
 
-
-  <header class='site-header'>
+  <header class='site-header-video'>
+    <div class="cuisine-searchbar">
+        <%= form_tag recipes_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+     <% end %>
+   </div>
     <video class="header-video" loop mute autoplay>
       <source src="/videos/The_Art_of_Pancakes.mp4" type="video/mp4">
     </video>
   </header>
-<h1 class="cuisine-h1">Cuisines</h1>
+
+
+
+
+
 
 
 <div class="cuisinecontainer">
+  <h1 class="cuisine-h1">Cuisines</h1>
 <% @cuisines.each do |cuisine| %>
    <p class="cuisinebuttons"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %>
       <%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %>
