@@ -13,34 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
 * {
   padding: 0;
   left: 0;
   margin: 0;
 }
 
-.header-video {
-  position: absolute;
-  top: 50%; left: 50%;
-  z-index: -2;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  /*top: 0;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  z-index: -1;*/
-}
 
-.site-header {
-  /*background-image: url(https://static1.squarespace.com/static/532ed214e4b078ca803b832f/t/569bd0c5c647addf69b495c3/1453052102928/food+spread);*/
-  height: 350px;
-  margin: 0;
-  border: 0;
-}
+
+
 
 .site-nav {
   background-color: rgba(255, 255, 255, 0.6);
@@ -107,8 +92,8 @@ p.nav-text {
 
 .logo {
   color: white;
-  position: relative;
-  top: 45%;
+  position: absolute;
+  top: 35%;
   width: 100%;
   text-align: center;
 }
