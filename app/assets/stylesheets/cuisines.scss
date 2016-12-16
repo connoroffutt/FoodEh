@@ -2,60 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .site-header-video {
-	height: 500px;
+  height: 500px;
 }
 
 .cuisine-h1 {
-	text-align: center;
+  text-align: center;
+  font-family: Papyrus, fantasy;
+  font-size: 50px;
+  margin: auto;
 }
 
 .cuisinebuttons {
-	border-radius: 20px;
-	width: 250px;
-	display: block;
-	float: left;
-	border: 0.5px solid red;
-	height: 200px;
-	padding: 10px;
-	margin: 10px;
-	text-align: center;
-	text-decoration: none;
-	background-color: white;
-	overflow: hidden;
-	margin-bottom: 2px;
-	font-family: "Avenir Next" !important;
-	margin-left: 20px;
+  border-radius: 20px;
+  width: 250px;
+  display: block;
+  float: left;
+  border: 0.5px solid red;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 2px;
+  font-family: "Avenir Next" !important;
+  margin-left: 20px;
 }
+
 p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p.cuisinebuttons a:active {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 
 }
 .cuisinecontainer {
-	padding-left: 1%;
-	padding-bottom: 5%;
-	margin-top: 125px;
+  padding-left: 1%;
+  padding-bottom: 5%;
+  margin-top: 125px;
 }
 
 img {
-	width: 100%;
-	height: 90%;
+  width: 100%;
+  height: 90%;
 }
 
 .cuisinebuttons:hover {
-	background-color: rgba(255, 10, 0, 0.6);
-	text-decoration: none;
-	border: 1px solid black;
+  background-color: rgba(255, 10, 0, 0.6);
+  text-decoration: none;
+  border: 1px solid black;
 }
 
 .cuisinebuttons:active {
-	position:relative;
-	text-decoration: none;
+  position:relative;
+  text-decoration: none;
 }
 
 .cuisine-h1 {
-	font-family: "Avenir Next" !important;
-	font-size: 40px;
+  font-family: "Avenir Next" !important;
+  font-size: 40px;
 }
 
 .header-video {
@@ -75,68 +79,68 @@ img {
 }
 
 .cuisine-searchbar {
-	position: absolute;
-	left: 40%;
-	top: 55%;
+  position: absolute;
+  left: 40%;
+  top: 55%;
 }
 
 .our-team-header {
-	margin-top: 1200px;
-	padding-left: 20%;
-	text-align: left;
-	margin-bottom: 10px;
+  margin-top: 1200px;
+  padding-left: 20%;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .our-team-container {
-	width: 60%;
-	margin-left: 25%;
-	margin-right: 10%;
-	margin-bottom: 10%;
+  width: 60%;
+  margin-left: 25%;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
 
 img.our-team-pic-andrea {
-	width: 150px;
-	height: 150px;
-	border: 3px solid red;
-	float: right;
-	overflow: hidden;
-	margin-top: 75px;
-	border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid red;
+  float: right;
+  overflow: hidden;
+  margin-top: 75px;
+  border-radius: 50%;
 }
 
 img.our-team-pic-connor {
-	width: 150px;
-	height: 150px;
-	border: 3px solid red;
-	float: right;
-	margin-top: 125px;
-	overflow: hidden;
-	border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid red;
+  float: right;
+  margin-top: 125px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 img.our-team-pic-jas {
-	width: 150px;
-	height: 150px;
-	border: 3px solid red;
-	float: right;
-	overflow: hidden;
-	margin-top: 125px;
-	right: 20%;
-	border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid red;
+  float: right;
+  overflow: hidden;
+  margin-top: 125px;
+  right: 20%;
+  border-radius: 50%;
 }
 
 .our-team-member-name {
-	font-family: "Avenir Next" !important;
-	width: 70%;
-	float: left;
-	border: 3px solid red;
-	margin-left: 0;
+  font-family: "Avenir Next" !important;
+  width: 70%;
+  float: left;
+  border: 3px solid red;
+  margin-left: 0;
 }
 
 .our-team-description {
-	font-family: "Avenir Next";
-	width: 70%;
-	float: left;
-	overflow: hidden;
-	margin-bottom: 10px;
-	padding-left: 1px;
+  font-family: "Avenir Next";
+  width: 70%;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-left: 1px;
 }
