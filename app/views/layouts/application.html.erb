@@ -10,16 +10,18 @@
 
 
   <body>
+    <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
     <nav class="site-nav">
       <% if current_user %>
-      <p class="nav-text">Signed in as: <%= current_user.first_name %></p></br></br>
-      <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
-      <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
-      <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
-      <%= link_to "Cuisines", cuisines_path, class: "nav-button" %> </br></p>
+        <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
+        <p class="nav-text">Signed in as: <%= current_user.first_name %></p>
+        <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
+        <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
+        <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
+        <%= link_to "Cuisines", cuisines_path, class: "nav-button" %></p>
       <% else %>
-      <%= link_to "Register", new_user_path, class: "nav-button" %>
-      <%= link_to "Login", :login, class: "nav-button" %></br></br>
+        <%= link_to "Register", new_user_path, class: "nav-button" %>
+        <%= link_to "Login", :login, class: "nav-button" %></br></br>
       <% end %>
     </nav>
 
