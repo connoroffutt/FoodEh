@@ -6,12 +6,16 @@
 <ul>
 
   <% @recipe.ingredients.each do |ingredient| %>
-    <li class="ingredients"><%= ingredient.description %></li>
+    <li class="ingredients"><%= ingredient.description %>
     <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
-      <%= f.submit(value: "add") %>
-      <%= f.hidden_field(:ingredient_id, value: ingredient.id)%>
+      <%= f.submit(value: "Add Ingredient") %>
+      <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
 
     <% end %>
   <% end %>
 </ul>
-<%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
+
+
+<div class="add-fav-button">
+  <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
+</div>

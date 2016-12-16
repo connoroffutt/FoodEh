@@ -17,31 +17,33 @@
 <body>
   <div class="site-header"></div>
 
-<h1> Welcome to your FoodEh profile <%= current_user.first_name %>! </h1>
+<h1> Welcome to your FoodEh profile, <%= current_user.first_name %>! </h1>
 
 
 
-<h2> Your Favorite Recipes </h2>
+<h2 class="user-favorites-title"> Your Favorite Recipes </h2>
 
+<div class="user-favorites">
    <% current_user.favorites.each do |favorite| %>
     <li><%=link_to favorite.recipe.name, favorite_path(favorite.id)%></li>
    <br>
    <% end %>
+</div>
 
+<h2 class="user-list-title"> Your Grocery List </h2>
 
-<h2> Your Grocery List </h2>
-
-
+    <div class="user-list">
      <% current_user.list.ingredients.each do |ingredient| %>
-       <li class="ingredients"><%= ingredient.description %><button class="destroy_ingredient">delete</button></li>
+       <li class="ingredients"><%= ingredient.description %>
        <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
-         <%= f.submit(value: "delete") %>
-         <%= f.hidden_field(:ingredient_id, value: ingredient.id)%>
+         <%= f.submit(value: "Delete Ingredient") %>
+         <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
        <% end %>
      <% end %>
+   </div>
 
-
-
+</br>
+</br>
 <h2 class="map-topper"> Grocery Stores Nearby </h2>
    <div id="map"></div>
 
