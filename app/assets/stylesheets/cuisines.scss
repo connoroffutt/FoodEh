@@ -24,6 +24,7 @@
 	overflow: hidden;
 	margin-bottom: 2px;
 	font-family: "Avenir Next" !important;
+	margin-left: 20px;
 }
 p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p.cuisinebuttons a:active {
 	text-decoration: none;
@@ -31,7 +32,7 @@ p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p
 
 }
 .cuisinecontainer {
-	padding-left: 5%;
+	padding-left: 1%;
 	padding-bottom: 5%;
 	margin-top: 125px;
 }
@@ -75,6 +76,67 @@ img {
 
 .cuisine-searchbar {
 	position: absolute;
-	left: 42.5%;
+	left: 40%;
 	top: 55%;
+}
+
+.our-team-header {
+	margin-top: 1200px;
+	padding-left: 20%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.our-team-container {
+	width: 60%;
+	margin-left: 25%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+}
+
+img.our-team-pic-andrea {
+	width: 150px;
+	height: 150px;
+	border: 3px solid red;
+	float: right;
+	overflow: hidden;
+	margin-top: 75px;
+	border-radius: 50%;
+}
+
+img.our-team-pic-connor {
+	width: 150px;
+	height: 150px;
+	border: 3px solid red;
+	float: right;
+	margin-top: 125px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+img.our-team-pic-jas {
+	width: 150px;
+	height: 150px;
+	border: 3px solid red;
+	float: right;
+	overflow: hidden;
+	margin-top: 125px;
+	right: 20%;
+	border-radius: 50%;
+}
+
+.our-team-member-name {
+	font-family: "Avenir Next" !important;
+	width: 70%;
+	float: left;
+	border: 3px solid red;
+	margin-left: 0;
+}
+
+.our-team-description {
+	font-family: "Avenir Next";
+	width: 70%;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-left: 1px;
 }
