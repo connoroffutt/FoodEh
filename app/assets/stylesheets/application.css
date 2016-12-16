@@ -66,37 +66,17 @@
     display: inline-block;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    letter-spacing: .05em;
+    letter-spacing: 0;
     cursor: pointer;
     float: right;
     font-size: 18px;
     text-decoration: none;
-    padding-top: 20px;
-   /*border-style: solid;
-   border-width: 1px 1px 3px;
-   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-   color: white;
-   background-color: rgba(255, 100, 100, 0.8);
-   border-radius: 4px;
-   cursor: pointer;
-   display: inline-block;
-   font-style: normal;
-   overflow: hidden;
-   text-align: center;
-   text-decoration: none;
-   text-overflow: ellipsis;
-   transition: all 200ms ease-in-out 0s;
-   white-space: nowrap;
-   font-family: "Avenir Next";
-   font-weight: 70;
-   padding: 2px 10px 2px;
-   font-size: 18px;
-   float: right;*/
-   margin-left: 8px;
-   margin-right: 4px;
-   margin-bottom: 0px;
-   margin-top: 4px;
-   text-shadow: 2px 2px grey;
+    padding-top: 0px;
+    margin-left: 0px;
+    margin-right: -px;
+    margin-bottom: 0px;
+    margin-top: 4px;
+    text-shadow: 2px 2px grey;
 }
 
 
@@ -107,9 +87,9 @@
   letter-spacing: .075em;
   margin-bottom: .375em;
   padding-top: 70px;
-  padding-right: 10px;
+  padding-right: 0px;
   float: right;
-  margin-right: 5px;
+  margin-right: 0px;
   font-size: 12px;
   font-weight: bold;
   text-shadow: 2px 2px grey;
@@ -135,7 +115,7 @@
   width: 300px;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 650px) {
 
   .nav-button {
   border-style: solid;
