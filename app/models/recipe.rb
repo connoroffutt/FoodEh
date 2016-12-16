@@ -11,7 +11,6 @@ class Recipe < ApplicationRecord
   def self.for(term)
     get("/search", query: {q: term})["recipes"]
     # JSON.parse(File.read("#{Rails.root}/public/search.json"))["recipes"]
-
   end
 
   def self.get_recipe(id)

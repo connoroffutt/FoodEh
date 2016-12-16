@@ -26,6 +26,7 @@
   background-color: white;
   overflow: hidden;
   margin-bottom: 2px;
+  font-family: "Avenir Next" !important;
 }
 
 p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p.cuisinebuttons a:active {
@@ -36,7 +37,7 @@ p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p
 .cuisinecontainer {
   padding-left: 5%;
   padding-bottom: 5%;
-  margin-top: 300px;
+  margin-top: 125px;
 }
 
 img {
@@ -53,6 +54,11 @@ img {
 .cuisinebuttons:active {
   position:relative;
   text-decoration: none;
+}
+
+.cuisine-h1 {
+  font-family: "Avenir Next" !important;
+  font-size: 40px;
 }
 
 .header-video {

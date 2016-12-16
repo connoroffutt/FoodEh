@@ -10,14 +10,14 @@
 }
 
 h1 {
-  font-family: Papyrus, fantasy;
+  font-family: "Avenir Next" !important;;
   font-size: 50px;
   text-align: center;
   padding-top: 5px;
 }
 
 h2 {
-  font-family: Papyrus, fantasy;
+  font-family: "Avenir Next";
   font-size: 35px;
   text-align: left;
   padding-top: 5px;
@@ -26,12 +26,47 @@ h2 {
 
 li {
   margin-left: 10px;
+  padding-top: 5px;
 }
 
 div#map {
   left: 10%;
+  border: 2px solid red;
 }
 
 h2.map-topper {
   text-align: center;
+}
+
+.user-list {
+  position: relative;
+  border: 2px solid red;
+  width: 50%;
+  overflow: hidden;
+  min-height: 20px;
+  left: 27.5%;
+}
+
+.user-list-title {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  left: 37.5%;
+  margin-top: 10px;
+}
+
+.user-favorites {
+  position: relative;
+  border: 2px solid red;
+  width: 50%;
+  overflow: hidden;
+  left: 27.5%;
+}
+
+.user-favorites-title {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  left: 35%;
+  margin-top: 10px;
 }
