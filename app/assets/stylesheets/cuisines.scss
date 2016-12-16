@@ -2,58 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .site-header-video {
-	height: 500px;
+  height: 500px;
 }
 
 .cuisine-h1 {
-	text-align: center;
+  text-align: center;
+  font-family: Papyrus, fantasy;
+  font-size: 50px;
+  margin: auto;
 }
 
 .cuisinebuttons {
-	border-radius: 20px;
-	width: 250px;
-	display: block;
-	float: left;
-	border: 0.5px solid red;
-	height: 200px;
-	padding: 10px;
-	margin: 10px;
-	text-align: center;
-	text-decoration: none;
-	background-color: white;
-	overflow: hidden;
-	margin-bottom: 2px;
+  border-radius: 20px;
+  width: 250px;
+  display: block;
+  float: left;
+  border: 0.5px solid red;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 2px;
 }
+
 p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p.cuisinebuttons a:active {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 
 }
 .cuisinecontainer {
-	padding-left: 5%;
-	padding-bottom: 5%;
-	margin-top: 300px;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  margin-top: 300px;
 }
 
 img {
-	width: 100%;
-	height: 90%;
+  width: 100%;
+  height: 90%;
 }
 
 .cuisinebuttons:hover {
-	background-color: rgba(255, 10, 0, 0.6);
-	text-decoration: none;
-	border: 1px solid black;
+  background-color: rgba(255, 10, 0, 0.6);
+  text-decoration: none;
+  border: 1px solid black;
 }
 
 .cuisinebuttons:active {
-	position:relative;
-	text-decoration: none;
-}
-
-.cuisine-h1 {
-	font-family: Papyrus, fantasy;
-	font-size: 50px;
+  position:relative;
+  text-decoration: none;
 }
 
 .header-video {
@@ -73,7 +72,8 @@ img {
 }
 
 .cuisine-searchbar {
-	position: absolute;
-	left: 42.5%;
-	top: 55%;
+  position: absolute;
+  left: 44.5%;
+  top: 55%;
+  // margin: 100%;
 }
