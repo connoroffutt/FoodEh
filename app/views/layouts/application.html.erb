@@ -24,6 +24,8 @@
         <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
         <%= link_to "Cuisines", cuisines_path, class: "nav-button" %></p>
       <% else %>
+      <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
+        <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
         <%= link_to "Register", new_user_path, class: "nav-button" %>
         <%= link_to "Login", :login, class: "nav-button" %></br></br>
       <% end %>
