@@ -3,7 +3,6 @@ class ListsController < ApplicationController
     list = List.find_or_create_by(user: current_user)
     list.ingredients << Ingredient.find(params[:ingredient][:ingredient_id])
 
-    redirect_to(user_path(current_user))
   end
 
   def destroy_ingredient

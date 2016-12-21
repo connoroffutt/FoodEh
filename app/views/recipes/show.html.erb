@@ -3,6 +3,12 @@
 
 <h1><%= @recipe.name %></h1>
 
+<div class="add-fav-button">
+  <% if current_user %>
+  <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
+  <% end %>
+</div>
+
 <ul>
 
   <% @recipe.ingredients.each do |ingredient| %>
@@ -15,10 +21,3 @@
     <% end %>
   <% end %>
 </ul>
-
-
-<div class="add-fav-button">
-  <% if current_user %>
-  <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
-  <% end %>
-</div>

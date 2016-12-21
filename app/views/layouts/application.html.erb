@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <%= favicon_link_tag 'FoodEh_Favicon_Logo.ico' %>
   <head>
     <title>FoodEh</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,20 +10,16 @@
 
 
   <body>
-    <div class="logo">
-      <img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic">
-    </div>
+    <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
     <nav class="site-nav">
       <% if current_user %>
-        <%= link_to image_tag("FoodEh_Logo.png", class: "nav-logo-pic"), cuisines_path, class: "logo-link" %>
-          <!-- <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic"/> -->
+        <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
         <p class="nav-text">Signed in as: <%= current_user.first_name %></p>
         <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
         <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
         <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
         <%= link_to "Cuisines", cuisines_path, class: "nav-button" %></p>
       <% else %>
-      <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
         <%= link_to "Register", new_user_path, class: "nav-button" %>
         <%= link_to "Login", :login, class: "nav-button" %></br></br>

@@ -10,6 +10,7 @@
   font-family: Papyrus, fantasy;
   font-size: 50px;
   margin: auto;
+	padding-top: 100px;
 }
 
 .cuisinebuttons {
@@ -85,15 +86,15 @@ img {
 }
 
 .our-team-header {
-  margin-top: 1200px;
-  padding-left: 20%;
-  text-align: left;
   margin-bottom: 10px;
+	display: inline-block;
+	width: 100%;
+	float: left;
+	text-align: center;
 }
 
 .our-team-container {
-  width: 60%;
-  margin-left: 25%;
+  width: 100%;
   margin-right: 10%;
   margin-bottom: 10%;
 }
@@ -102,38 +103,29 @@ img.our-team-pic-andrea {
   width: 150px;
   height: 150px;
   border: 3px solid red;
-  float: right;
-  overflow: hidden;
-  margin-top: 75px;
   border-radius: 50%;
+	float: left;
 }
 
 img.our-team-pic-connor {
   width: 150px;
   height: 150px;
   border: 3px solid red;
-  float: right;
-  margin-top: 125px;
-  overflow: hidden;
   border-radius: 50%;
+	float: left;
 }
 img.our-team-pic-jas {
   width: 150px;
   height: 150px;
   border: 3px solid red;
-  float: right;
-  overflow: hidden;
-  margin-top: 125px;
-  right: 20%;
   border-radius: 50%;
+	float: left;
 }
 
 .our-team-member-name {
   font-family: "Avenir Next" !important;
   width: 70%;
   float: left;
-  border: 3px solid red;
-  margin-left: 0;
 }
 
 .our-team-description {
@@ -142,5 +134,6 @@ img.our-team-pic-jas {
   float: left;
   overflow: hidden;
   margin-bottom: 10px;
-  padding-left: 1px;
+	padding-left: 30px;
+	padding-right: 10px;
 }
