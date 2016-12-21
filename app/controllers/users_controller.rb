@@ -12,7 +12,6 @@ class UsersController < ApplicationController
       flash[:alert] = "Account Creation Successful!"
       redirect_to (root_path)
     else
-      # byebug
       render 'new'
     end
   end

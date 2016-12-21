@@ -7,15 +7,18 @@
 
   <% @recipe.ingredients.each do |ingredient| %>
     <li class="ingredients"><%= ingredient.description %>
+    <% if current_user%>
     <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
       <%= f.submit(value: "Add Ingredient") %>
       <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
-
+    <% end %>
     <% end %>
   <% end %>
 </ul>
 
 
 <div class="add-fav-button">
+  <% if current_user %>
   <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
+  <% end %>
 </div>
