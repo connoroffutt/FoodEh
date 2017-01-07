@@ -7,10 +7,12 @@
       </p>
      <% end %>
    </div>
-   <!-- <#%= video_tag("FoodEh_Header_Video.mp4", class: "header-video") %> -->
-   <video class="header-video" loop muted autoplay> -->
+
+   <%= video_tag "FoodEh_Header_Video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class:"header-video" %>
+   <!-- <%= video_tag("FoodEh_Header_Video.mp4", class: "header-video") %> -->
+   <!-- <video class="header-video" loop muted autoplay>
      <source src="/videos/FoodEh_Header_Video.mp4" type="video/mp4">
-   </video>
+   </video> -->
   </header>
 <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
 
