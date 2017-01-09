@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Cuisine.create(name: "American", image_url: "http://theonegroup.ca/wp-content/uploads/2016/07/BURGER.jpeg")
+Cuisine.create(name: "American", image_url: "https://images.pexels.com/photos/59943/pexels-photo-59943.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
 Cuisine.create(name: "British", image_url: "http://static.wixstatic.com/media/c3c494_c19986faccd340c08a14fbe0b59a9b4a.jpg")
 Cuisine.create(name: "Cajun", image_url: "https://s-media-cache-ak0.pinimg.com/originals/d5/d9/29/d5d92947bb7e3100da854e39c4a3dc0f.jpg")
 Cuisine.create(name: "Caribbean", image_url: "http://deluxe2restaurant.com/custom/2.jpg")

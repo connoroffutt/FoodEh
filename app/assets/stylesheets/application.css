@@ -73,7 +73,6 @@
     text-decoration: none;
     padding-top: 0px;
     margin-left: 0px;
-    margin-right: -px;
     margin-bottom: 0px;
     margin-top: 4px;
     text-shadow: 2px 2px grey;
@@ -115,7 +114,21 @@
   width: 300px;
 }
 
-@media only screen and (max-width: 650px) {
+
+@media only screen and (max-width: 785px) {
+
+  .nav-button {
+    padding-left: 5px;
+    padding-right: 5px;
+
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
 
   .nav-button {
   border-style: solid;
@@ -149,6 +162,7 @@ p.nav-text {
   font-size: 12px;
   float: right;
   margin-right: 5px;
+  padding-top: 20px;
 }
 
 .nav-text {
@@ -158,5 +172,36 @@ p.nav-text {
   top: 7%;
   margin-right: 0;
 }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  .nav-button {
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  color: black;
+  background-color: rgba(255, 100, 100, 0.75);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 200ms ease-in-out 0s;
+  white-space: nowrap;
+  font-family: "Avenir Next";
+  font-weight: 70;
+  padding: 2px 10px 2px;
+  font-size: 9px;
+  float: right;
+  margin-left: 1px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 2px;
 
 }
