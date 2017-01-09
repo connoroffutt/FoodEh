@@ -3,14 +3,14 @@
 
 <h1><%= @recipe.name %></h1>
 
+
 <div class="add-fav-button">
   <% if current_user %>
   <%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %>
   <% end %>
 </div>
 
-<ul>
-
+<ul class="recipe-ingredients">
   <% @recipe.ingredients.each do |ingredient| %>
     <li class="ingredients"><%= ingredient.description %>
     <% if current_user%>

@@ -9,7 +9,7 @@ class ListsController < ApplicationController
     list = List.find_by(user: current_user)
     ingredient = list.ingredients.find(params[:ingredient_id])
     list.ingredients.delete(ingredient)
-    flash[:alert] = "ingredient removed from grocery list!"
+    flash[:alert] = "Ingredient removed from grocery list!"
     redirect_to (user_path(current_user))
   end
 end
