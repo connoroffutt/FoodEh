@@ -15,7 +15,7 @@ class Recipe < ApplicationRecord
 
   def self.get_recipe(id)
     data = get("/get", query: {rId: id})["recipe"]
-    recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"])
+    recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"], recipe_construction: data["source_url"], recipe_picture: data["image_url"])
     data["ingredients"].each do |i|
       recipe.ingredients.create!(description: i)
     end

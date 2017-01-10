@@ -2,7 +2,8 @@
 
 
 <h1><%= @recipe.name %></h1>
-
+  <%= @recipe.recipe_construction %>
+  <%= @recipe.recipe_picture %>
 
 <div class="add-fav-button">
   <% if current_user %>
