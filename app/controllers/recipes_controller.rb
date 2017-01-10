@@ -18,6 +18,10 @@ class RecipesController < ApplicationController
     @get_id = params[:id]
     # @recipes = Recipe.get_recipe(@get_id)
     @recipe = Recipe.get_recipe(@get_id)
+
+    if current_user
+      @review = @recipe.reviews.build
+    end
   end
 
   def create
