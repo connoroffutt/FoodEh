@@ -25,11 +25,6 @@ th {
   background-color: rgba(255, 100, 100, 0.8);
 }
 
-tbody img {
-  width: 175px;
-  height: 100px;
-}
-
 .recipe-image {
   width: 177px;
   height: 100px;
@@ -88,4 +83,8 @@ h2.recipe-topper {
   position: relative;
   left: 40%;
   margin-bottom: 10px;
+}
+
+.recipe-ingredients {
+  padding-bottom: 2%;
 }
