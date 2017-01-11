@@ -10,7 +10,7 @@
 
   <body>
     <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
-
+<!--
     <nav class="site-nav">
       <% if current_user %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
@@ -22,38 +22,8 @@
       <% else %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
         <%= link_to "Register", new_user_path, class: "nav-button" %>
-        <!-- <%= link_to "Login", :login, class: "nav-button" %></br></br> -->
-
-        <!-- Modal Trigger -->
-        <!-- <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Modal</button> -->
-
-        <!-- Modal Structure -->
-        <!-- <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Login</h4>
-
-            <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-          </div>
-        </form>
-      </div> -->
-
       <% end %>
-    </nav>
+    </nav> -->
 
     <nav class="site-nav">
       <% if current_user %>
@@ -71,27 +41,27 @@
         <div id="modal1" class="modal">
           <div class="modal-content">
             <h4>Login</h4>
-        <%= form_tag user_sessions_path, :method => :post do %>
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-            <%= label_tag :email %><br />
-            <%= text_field_tag :email %>
-           </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-            <%= label_tag :password %><br />
-            <%= password_field_tag :password %>
-          </div>
-        </div>
-          <div class="field">
-            <%= check_box_tag :remember_me %><br />
-            <%= label_tag :remember_me %>
-          </div>
+            <%= form_tag user_sessions_path, :method => :post do %>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                <%= label_tag :email %><br />
+                <%= text_field_tag :email %>
+               </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <%= label_tag :password %><br />
+                <%= password_field_tag :password %>
+              </div>
+            </div>
+            <div class="field">
+              <%= check_box_tag :remember_me %><br />
+              <%= label_tag :remember_me %>
+            </div>
 
           <div class="modal-footer">
-            <a class=" modal-action modal-close waves-effect waves-red btn-flat"><%= submit_tag "Login" %></a>
+            <a class=" modal-action modal-close waves-effect waves btn-flat"><%= submit_tag "Login" %></a>
           </div>
         </form>
         <% end %>
