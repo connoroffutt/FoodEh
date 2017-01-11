@@ -17,13 +17,13 @@ table {
   border-right: 0;
 }
 
-.odd {
-  background-color: rgba(255, 100, 100, 0.8);
-}
+// .odd {
+//   background-color: rgba(255, 100, 100, 0.8);
+// }
 
-th {
-  background-color: rgba(255, 100, 100, 0.8);
-}
+// th {
+//   background-color: rgba(255, 100, 100, 0.8);
+// }
 
 tbody img {
   width: 175px;
@@ -77,6 +77,10 @@ h2.recipe-topper {
   margin-right: 4px;
   margin-top: 10px;
 
+
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .ingredients {
@@ -88,4 +92,9 @@ h2.recipe-topper {
   position: relative;
   left: 40%;
   margin-bottom: 10px;
+
+
+  padding: 0;
+  border: none;
+  background: none;
 }
