@@ -10,7 +10,8 @@ class UsersController < ApplicationController
       auto_login(@user)
       UserMailer.welcome(@user).deliver_later
       flash[:alert] = "Account Creation Successful!"
-      redirect_to (root_path)
+      # redirect_to (root_path)
+      redirect_back fallback_location: root_url
     else
       render 'new'
     end
