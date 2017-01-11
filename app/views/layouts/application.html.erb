@@ -28,43 +28,48 @@
     <nav class="site-nav">
       <% if current_user %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-        <p class="nav-text">Signed in as: <%= current_user.first_name %></p>
+        <div class="nav-text">
+          Signed in as: <%= current_user.first_name %>
+        </div>
         <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
         <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
         <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
         <%= link_to "Cuisines", cuisines_path, class: "nav-button" %></p>
       <% else %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-        <%= link_to "Register", new_user_path, class: "nav-button" %>
-        <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Login</button>
+        <%= link_to "Sign Up", new_user_path, class: "nav-button" %>
+        <button id="login-button" class="waves-effect waves-light btn modal-trigger N/A transparent" data-target="modal1">Login</button>
 
         <div id="modal1" class="modal">
-          <div class="modal-content">
+          <div class="modal-content blue-grey darken-3">
             <h4>Login</h4>
             <%= form_tag user_sessions_path, :method => :post do %>
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                <%= label_tag :email %><br />
-                <%= text_field_tag :email %>
-               </div>
+                  <%= label_tag :email %><br />
+                  <%= text_field_tag :email %>
+                </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <%= label_tag :password %><br />
-                <%= password_field_tag :password %>
+                  <%= label_tag :password %><br />
+                  <%= password_field_tag :password %>
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <%= check_box_tag :remember_me %><br />
-              <%= label_tag :remember_me %>
-            </div>
-
-          <div class="modal-footer">
-            <a class=" modal-action modal-close waves-effect waves btn-flat"><%= submit_tag "Login" %></a>
+              <div class="row">
+                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                <label for="filled-in-box">
+                  <%= check_box_tag :remember_me %><br />
+                  <%= label_tag :remember_me %>
+                </label>
+              </div>
+              <div class="modal-footer N/A transparent">
+                <a class="modal-action modal-close waves-effect waves btn-flat #ffffff white"><%= submit_tag "Login" %></a>
+              </div>
+            </form>
+            <% end %>
           </div>
-        </form>
-        <% end %>
         </div>
         <!-- <%= link_to "Login", :login, class: "nav-button" %></br></br> -->
       <% end %>
@@ -72,9 +77,9 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     </nav>
 
-  <% flash.each do |key, message| %>
-    <div class="flash-<%= key %>"><%= message %></div>
-  <% end %>
+    <% flash.each do |key, message| %>
+      <div class="flash-<%= key %>"><%= message %></div>
+    <% end %>
 
     <%= yield %>
 

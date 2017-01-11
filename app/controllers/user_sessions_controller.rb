@@ -7,11 +7,11 @@ class UserSessionsController < ApplicationController
   def create
     if @user = login(params[:email], params[:password], params[:remember_me])
       # redirect_to session[:return_to_url], :notice => "Logged In!"
-      redirect_back_or_to root_url, :notice => "Logged In!"
-      # redirect_to(root_path)
+      redirect_back fallback_location: root_url, notice: "Logged In!"
     else
       flash.now[:alert] = "Oh no! Login Failed."
-      render action: 'new'
+      redirect_to(root_path)
+      # render action: 'new'
     end
   end
 

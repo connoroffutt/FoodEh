@@ -1,4 +1,7 @@
-  <header class='site-header-video'>
+  <header class='responsive-video'>
+
+
+
     <div class="cuisine-searchbar">
         <%= form_tag recipes_path, :method => 'get' do %>
       <p>
@@ -24,7 +27,7 @@
   <h1 class="cuisine-h1">Cuisines</h1>
     <% @cuisines.each do |cuisine| %>
       <div class="cuisinebuttons">
-        <div class="cuisine-name"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
+        <div class="cuisine-name"><%= link_to cuisine.name.upcase, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
         <div class="cuisine-image"><%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %></div>
       </div>
 
@@ -34,19 +37,40 @@
    <% end %>
 </div>
 
-<container class="our-team-container">
+<div class="our-team-container">
   <h1 class="our-team-header">Meet Our Team</h1>
-  <container class="our-team-andrea">
-    <h2 class="our-team-member-name">Andrea Africa<img src="/assets/Andrea.jpg" class="our-team-pic-andrea" alt="our-team-pic-andrea"></h2>
-        <h3 class="our-team-description"></h3>
-  </container>
-  <container class="our-team-connor">
-    <h2 class="our-team-member-name">Connor Offutt<img src="/assets/connor.jpg" class="our-team-pic-connor" alt="our-team-pic-connor"></h2>
-        <h3 class="our-team-description"></h3>
-  </container>
-  <container class="our-team-jas">
-    <h2 class="our-team-member-name">Jasmine Ning<img src="/assets/Jas.jpg" class="our-team-pic-jas" alt="our-team-pic-jas"></h2>
-        <h3 class="our-team-description"></h3>
-  </container>
-</container>
+  <div class="our-team-andrea">
+    <div class="team-box">
+      <img src="/assets/Andrea.jpg" class="our-team-pic-andrea" alt="our-team-pic-andrea">
+      <h2>Andrea Africa</h2>
+      <h3>Web Developer</h3>
+      <p>Enter short description</p>
+      <!-- <a href="https://github.com/amafrica"></a>
+      <a href="https://www.linkedin.com/in/andrea-africa"></a>
+      <a href=">https://twitter.com/amafrica"</a> -->
+    </div>
+  </div>
+  <div class="our-team-connor">
+    <div class="team-box">
+      <img src="/assets/connor.jpg" class="our-team-pic-connor" alt="our-team-pic-connor">
+      <h2>Connor Offutt</h2>
+      <h3>Web Developer</h3>
+      <p>Enter short description</p>
+      <!-- <a href="https://github.com/connoroffutt"></a>
+      <a href="https://www.linkedin.com/in/connor-offutt"></a>
+      <a href="https://twitter.com/amafrica"></a> -->
+    </div>
+  </div>
+  <div class="our-team-jas">
+    <div class="team-box">
+      <img src="/assets/Jas.jpg" class="our-team-pic-jas" alt="our-team-pic-jas">
+      <h2>Jasmine Ning</h2>
+      <h3>Web Developer</h3>
+      <p class="team-description">Enter short description</p>
+      <!-- <a href="https://github.com/jazziining" class="github"></a>
+      <a href="https://www.linkedin.com/in/jazziining" class="linkedin"></a>
+      <a href="https://twitter.com/amafrica" class="twitter"></a> -->
+    </div>
+  </div>
+</div>
 </br>
