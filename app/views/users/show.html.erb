@@ -41,12 +41,14 @@
      <% current_user.list.ingredients.each do |ingredient| %>
        <li class="ingredients-user-page"><%= ingredient.description %>
        <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
-         <%= f.submit(value: "Delete Ingredient") %>
+         <%= f.submit "Delete Ingredient" %>
          <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
        <% end %>
      <% end %>
      <% end %>
    </div>
+
+
 
 </br>
 </br>
