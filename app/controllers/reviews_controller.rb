@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to recipes_url, notice: 'Review created successfully'
+      redirect_to :back, notice: 'Review created successfully'
     else
       render 'recipe/show'
     end

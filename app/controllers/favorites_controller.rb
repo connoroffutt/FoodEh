@@ -8,7 +8,7 @@ before_action :require_login
       favorite.recipe = Recipe.find(params["recipe_id"])
       if favorite.save
         flash[:alert] = "Saved to favorites!"
-        redirect_to (root_path)
+        redirect_to :back
       else
         flash[:alert] = "Unable to save to favorites!"
         redirect_to (root_path)
