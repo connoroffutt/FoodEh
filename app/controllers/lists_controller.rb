@@ -10,9 +10,4 @@ class ListsController < ApplicationController
     ingredient = list.ingredients.find(params[:ingredient_id])
     list.ingredients.delete(ingredient)
   end
-
-  def destroy_ingredient_all
-  
-  end
-
 end

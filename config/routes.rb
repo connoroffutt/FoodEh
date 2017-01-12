@@ -27,5 +27,4 @@ Rails.application.routes.draw do
   delete '/list/:ingredient_id' => 'lists#destroy_ingredient', :as => :list_destroy_ingredient
 
 
-
 end
