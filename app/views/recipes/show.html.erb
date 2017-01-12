@@ -4,9 +4,11 @@
 <h1><%= @recipe.name %></h1>
   <div class="recipe-show">
     <%=link_to(image_tag(@recipe.recipe_picture)) %>
-    <p class="recipe-instructions"><%= link_to("Cooking Instructions", @recipe.recipe_construction) %></p>
-</div>
+  </div>
 
+  <div class="recipe-instructions">
+    <%= link_to("Cooking Instructions", @recipe.recipe_construction) %>
+  </div>
 <div class="add-fav-button">
   <% if current_user %>
   <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>

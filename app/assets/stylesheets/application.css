@@ -24,6 +24,11 @@
   font-family: "Avenir Next" !important;
 }
 
+input#search {
+  border-bottom: 1px solid red;
+}
+
+
 #login-button {
   padding: 3px 15px;
   font-size: 13px;

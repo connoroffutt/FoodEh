@@ -6,6 +6,19 @@ html {
   overflow-x: hidden;
 }
 
+.recipe-instructions {
+  position: relative;;
+  left: 43%;
+  right: 43%;
+  margin-bottom: 10px;
+
+
+  padding: 0;
+  border: none;
+  background: none;
+
+}
+
 .site-header {
   background-image: url("https://static1.squarespace.com/static/532ed214e4b078ca803b832f/t/569bd0c5c647addf69b495c3/1453052102928/food+spread");
   height: 350px;
@@ -71,8 +84,8 @@ h2.recipe-topper {
 
 .add-fav-button {
   position: relative;;
-  left: 42.5%;
-  right: 42.5%;
+  left: 44%;
+  right: 44%;
   margin-bottom: 10px;
 
 
@@ -93,17 +106,6 @@ h2.recipe-topper {
   right: 32.5%;
 }
 
-p.recipe-instructions {
-  position: relative;;
-  left: 42.5%;
-  right: 42.5%;
-  margin-bottom: 10px;
-
-
-  padding: 0;
-  border: none;
-  background: none;
-}
 
 .new-review-header {
   min-width: 100%;
