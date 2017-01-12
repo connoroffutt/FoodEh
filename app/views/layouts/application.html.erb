@@ -8,42 +8,24 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <header>
+  <body>
     <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
 
-    <!-- <nav class="site-nav">
+    <nav class="site-nav">
       <% if current_user %>
-        <a href="/">
-          <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-        </a>
-        <p class="nav-text">Signed in as: <%= current_user.first_name %></p>
+      <a href="/">
+        <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
+      </a>
+        <div class="nav-text">
+          Signed in as: <%= current_user.first_name %>
+        </div>
         <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
         <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
         <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
         <%= link_to "Cuisines", '/#cuisine-link-target', class: "nav-button" %></p>
       <% else %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-        <%= link_to "Register", new_user_path, class: "nav-button" %>
-      <% end %>
-    </nav> -->
-
-    <nav class="site-nav">
-      <% if current_user %>
-          <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-          <div class="nav-text">
-            Signed in as: <%= current_user.first_name %>
-          </div>
-          <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
-          <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
-          <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
-          <%= link_to "Cuisines", cuisines_path, class: "nav-button" %></p>
-        <% else %>
-          <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
-          <!-- <%= link_to "Sign Up", new_user_path, class: "nav-button" %> -->
-          <!-- <%= link_to "Login", :login, class: "nav-button" %></br></br> -->
-
-
-<!-- MATERIALIZE LOGIN/SIGNUP -->
+        <!-- <%= link_to "Sign Up", new_user_path, class: "nav-button" %> -->
         <button id="login-button" class="waves-effect waves-light btn modal-trigger N/A transparent" data-target="modal1">Login</button>
 
         <div id="modal1" class="modal">
@@ -71,35 +53,29 @@
                 </label>
               </div>
               <div class="modal-footer N/A transparent">
-                <a class="modal-action modal-close waves-effect waves btn-flat #ffffff"><%= submit_tag "Login" %></a>
+                <a class="modal-action modal-close waves-effect waves btn-flat #ffffff white"><%= submit_tag "Login" %></a>
               </div>
-
-              <div class="modal-footer waves-effect waves-light btn"><%= link_to "Sign Up", new_user_path %></a>
-
-
-              <!-- <div class="modal-footer N/A transparent">
+              <div class="modal-footer N/A transparent">
                 <%= link_to "Sign Up", new_user_path, :class => "signup-button" %>
-              </div> -->
+                <!-- <a id="signup-button" class="waves-effect waves-light btn"><%= link_to "Sign Up" %></a> -->
+
+                  <!-- <input type="submit" name="commit" value="Sign Up!"><%= link_to "Sign Up", new_user_path %></input> -->
+              </div>
             </form>
             <% end %>
           </div>
         </div>
+        <!-- <%= link_to "Login", :login, class: "nav-button" %></br></br> -->
       <% end %>
-
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     </nav>
-  </header>
-
-  <body>
-
 
     <% flash.each do |key, message| %>
       <div class="flash-<%= key %>"><%= message %></div>
     <% end %>
 
     <%= yield %>
-
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
