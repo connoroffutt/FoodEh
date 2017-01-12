@@ -124,7 +124,6 @@
 
 .nav-text {
   color: #FFF;
-  /*font: 400 2.875em/1.30435 brandon-grotesque,sans-serif;*/
   text-transform: uppercase;
   letter-spacing: .075em;
   margin-bottom: .375em;
@@ -134,7 +133,7 @@
   font-size: 12px;
   font-weight: bold;
   text-shadow: 2px 2px grey;
-
+  overflow: hidden;
 
   /*color: black;
   position: fixed;
