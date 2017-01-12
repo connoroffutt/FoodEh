@@ -14,9 +14,18 @@ h1 {
   font-size: 50px;
   text-align: center;
   padding-top: 5px;
+  margin-left: 10px;
 }
 
-h2 {
+h1.user-list-title {
+  font-family: "Avenir Next";
+  font-size: 35px;
+  text-align: left;
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+h1.user-favorites-title {
   font-family: "Avenir Next";
   font-size: 35px;
   text-align: left;
@@ -34,8 +43,12 @@ div#map {
   border: 2px solid red;
 }
 
-h2.map-topper {
+h1.map-topper {
+  font-family: "Avenir Next";
+  font-size: 35px;
   text-align: center;
+  padding-top: 5px;
+  margin-left: 10px;
 }
 
 .user-list {

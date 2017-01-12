@@ -214,6 +214,7 @@ p.nav-text {
   margin-right: 0px;
   max-width: 200px;
 }
+}
 
 
 @media only screen and (max-width: 450px) {
@@ -244,4 +245,5 @@ p.nav-text {
   margin-bottom: 0px;
   margin-top: 2px;
 
+}
 }

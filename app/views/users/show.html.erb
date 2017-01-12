@@ -21,7 +21,7 @@
 
 
 
-<h2 class="user-favorites-title"> Your Favorite Recipes </h2>
+<h1 class="user-favorites-title"> Your Favorite Recipes </h1>
 
 <div class="user-favorites">
    <% current_user.favorites.each do |favorite| %>
@@ -30,7 +30,7 @@
    <% end %>
 </div>
 
-<h2 class="user-list-title"> Your Grocery List </h2>
+<h1 class="user-list-title"> Your Grocery List </h1>
 
     <div class="user-list">
      <% if current_user.list == nil %>
@@ -51,7 +51,7 @@
 </br>
 </br>
 
-<h2 class="map-topper"> Grocery Stores Nearby </h2>
+<h1 class="map-topper"> Grocery Stores Nearby </h2>
    <div id="map"></div>
 
   <script>
