@@ -53,11 +53,22 @@
   background-color: white;
 }*/
 
+a.modal-action {
+  float: left !important;
+  margin: auto !important;
+  bottom: 40px !important;
+  left: 225px !important;
+}
+
+.modal-footer {
+  width: 50% !important;
+}
+
 .signup-button {
-  margin: auto;
   background-color: #c62828;
   padding: 5px;
   color: white;
+  float: right;
 }
 
 .site-nav {
