@@ -4,9 +4,11 @@
 <h1><%= @recipe.name %></h1>
   <div class="recipe-show">
     <%=link_to(image_tag(@recipe.recipe_picture)) %>
-    <p class="recipe-instructions"><%= link_to("Cooking Instructions", @recipe.recipe_construction) %></p>
-</div>
+  </div>
 
+  <div class="recipe-instructions">
+    <%= link_to("Cooking Instructions", @recipe.recipe_construction) %>
+  </div>
 <div class="add-fav-button">
   <% if current_user %>
   <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>
@@ -23,16 +25,14 @@
     <% end %>
     <% end %>
   <% end %>
-</ul
+</ul>
 
-<h3>Review</h3>
+<h3 class="review-section-header">Reviews</h3>
 
-<p>Review for <%= @recipe.name %></p>
 
-<%= @recipe.reviews.each do |review| %>
-  <p>
-    <%= review.comment %>
-    <br>
+<% @recipe.reviews.each do |review| %>
+  <p class="new-reviews"><b>
+    <%= review.comment %></b>
     <% if review.user != nil %>
       <em> by <%= review.user.email %></em>
       Added on: <%= review.created_at %>
@@ -41,7 +41,7 @@
 <% end %>
 
 <% if current_user %>
-    <h4>New Review</h4>
+    <h4 class="new-review-header">Write a New Review</h4>
 
     <%= form_for([@recipe, @review]) do |f|%>
 
