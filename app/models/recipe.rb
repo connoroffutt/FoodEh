@@ -17,9 +17,10 @@ class Recipe < ApplicationRecord
   def self.get_recipe(id)
     data = get("/get", query: {rId: id})["recipe"]
     fid = data["recipe_id"]
+    # binding.pry
 
     if Recipe.exists?(['f2f_id LIKE ?', "%#{fid}%"])
-      recipe = Recipe.find_by fid
+      recipe = Recipe.find_by f2f_id: data["recipe_id"]
     else
       recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"], recipe_construction: data["source_url"], recipe_picture: data["image_url"])
       data["ingredients"].each do |i|
