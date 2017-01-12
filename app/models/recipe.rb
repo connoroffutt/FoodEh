@@ -6,6 +6,7 @@ class Recipe < ApplicationRecord
   has_many :users
   has_and_belongs_to_many :ingredients
   has_many :users, through: :favorites
+  has_many :reviews
 
 
   def self.for(term)
@@ -15,10 +16,17 @@ class Recipe < ApplicationRecord
 
   def self.get_recipe(id)
     data = get("/get", query: {rId: id})["recipe"]
-    recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"])
-    data["ingredients"].each do |i|
-      recipe.ingredients.create!(description: i)
+    fid = data["recipe_id"]
+    # binding.pry
+
+    if Recipe.exists?(['f2f_id LIKE ?', "%#{fid}%"])
+      recipe = Recipe.find_by f2f_id: data["recipe_id"]
+    else
+      recipe = Recipe.create!(f2f_id: data["recipe_id"], name: data["title"], recipe_construction: data["source_url"], recipe_picture: data["image_url"])
+      data["ingredients"].each do |i|
+        recipe.ingredients.create!(description: i)
+      end
+      recipe
     end
-    recipe
   end
 end

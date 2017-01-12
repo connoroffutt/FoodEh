@@ -33,14 +33,18 @@
 <h2 class="user-list-title"> Your Grocery List </h2>
 
     <div class="user-list">
-     <% if current_user.list %>
-       <% current_user.list.ingredients.each do |ingredient| %>
-         <li class="ingredients-user-page"><%= ingredient.description %>
-         <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
-           <%= f.submit(value: "Delete Ingredient") %>
-           <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
-         <% end %>
+     <% if current_user.list == nil %>
+        <%= "No Ingredients Selected." %>
+     <% elsif current_user.list.ingredients.empty? %>
+        <%= "No Ingredients Selected." %>
+     <% else %>
+     <% current_user.list.ingredients.each do |ingredient| %>
+       <li class="ingredients-user-page"><%= ingredient.description %>
+       <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
+         <%= f.submit "Delete Ingredient" %>
+         <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
        <% end %>
+     <% end %>
      <% end %>
    </div>
 

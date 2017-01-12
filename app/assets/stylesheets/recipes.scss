@@ -25,11 +25,6 @@ table {
 //   background-color: rgba(255, 100, 100, 0.8);
 // }
 
-tbody img {
-  width: 175px;
-  height: 100px;
-}
-
 .recipe-image {
   width: 177px;
   height: 100px;
@@ -54,47 +49,43 @@ h2.recipe-topper {
 }
 
 .add-fav-button {
-  border-style: solid;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  color: black;
-  background-color: rgba(255, 100, 100, 0.8);
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  font-style: normal;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all 200ms ease-in-out 0s;
-  white-space: nowrap;
-  font-family: "Avenir Next";
-  font-weight: 70;
-  padding: 2px 10px 2px;
-  font-size: 18px;
-  margin-left: 8px;
-  margin-right: 4px;
-  margin-top: 10px;
+  max-width: 150px;
+}
 
+.add-fav-button:hover {
 
-  padding: 0;
-  border: none;
-  background: none;
 }
 
 .ingredients {
   position: relative;
-  left: 40%;
+  left: 30%;
+  text-align: center;
+  max-width: 35%;
 }
 
 .add-fav-button {
   position: relative;
-  left: 40%;
+  left: 45%;
+  right: 45%;
   margin-bottom: 10px;
 
 
   padding: 0;
   border: none;
   background: none;
+}
+
+.recipe-ingredients {
+  padding-bottom: 2%;
+}
+
+.recipe-show img {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  left: 35%;
+}
+
+.recipe-instructions {
+  text-align: center;
 }
