@@ -58,7 +58,7 @@ a.modal-action {
   margin: auto !important;
   bottom: 40% !important;
   margin-left: 30% !important;
-  width: 120px;
+  width: 140px;
   align-items: flex-start;
   text-align: center;
 }
@@ -74,7 +74,7 @@ a.modal-action {
   margin: auto;
   align-items: flex-start;
   text-align: center;
-  width: 120px;
+  width: 140px;
   margin-left: 30%;
   overflow-y: hidden;
 }
@@ -87,6 +87,7 @@ a.modal-action {
   width: 100%;
   height: 100px;
   z-index: 1;
+  line-height: 24px !important;
 
 }
 
@@ -142,7 +143,7 @@ a.modal-action {
 
 
 .nav-text {
-  color: #FFF;
+  color: white;
   text-transform: uppercase;
   letter-spacing: .075em;
   margin-bottom: .375em;
