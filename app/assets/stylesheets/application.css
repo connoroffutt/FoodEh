@@ -53,10 +53,6 @@ input#search {
   text-shadow: 2px 2px grey;
 }
 
-/*#signup-button {
-  margin: auto;
-  background-color: white;
-}*/
 
 a.modal-action {
   float: left !important;
@@ -69,11 +65,21 @@ a.modal-action {
   width: 50% !important;
 }
 
-.signup-button {
+#signup-button {
   background-color: #c62828;
-  padding: 5px;
+  padding: 20px;
+  padding-left: 80px;
+  bottom: 30px;
+  left: 72px;
   color: white;
   float: right;
+}
+
+.signup-text {
+  position: relative;
+  left: 246px;
+  bottom: 35px;
+  z-index: 1;
 }
 
 .site-nav {
@@ -261,5 +267,5 @@ p.nav-text {
   margin-bottom: 0px;
   margin-top: 2px;
 
-}
+  }
 }

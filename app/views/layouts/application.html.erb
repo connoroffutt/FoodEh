@@ -53,12 +53,15 @@
                 </label>
               </div>
               <div class="modal-footer N/A transparent">
-                <a class="modal-action modal-close waves-effect waves btn-flat #ffffff white"><%= submit_tag "Login" %></a>
+                <a class="modal-action modal-close waves-effect waves btn-flat white"><%= submit_tag "Login" %></a>
               </div>
               <div class="modal-footer N/A transparent">
-                <%= link_to "Sign Up", new_user_path, :class => "signup-button" %>
-                <!-- <a id="signup-button" class="waves-effect waves-light btn"><%= link_to "Sign Up" %></a> -->
+                <!-- <%= link_to "Sign Up", new_user_path, :class => "signup-button" %> -->
+              <a id="signup-button" class="waves-effect waves-light btn #c62828">
 
+                  <%= link_to "SIGN UP", new_user_path, class: "signup-text" %>
+
+              </a>
                   <!-- <input type="submit" name="commit" value="Sign Up!"><%= link_to "Sign Up", new_user_path %></input> -->
               </div>
             </form>
