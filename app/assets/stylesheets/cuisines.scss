@@ -101,7 +101,7 @@ img {
 
 .cuisinecontainer {
   width: 100%;
-  border: solid 4px blue;
+  // border: solid 4px blue;
 }
 
 // .cuisinebuttons {
@@ -145,9 +145,7 @@ img {
 
 #our-team-container {
   width: 100%;
-  border: solid 10px salmon;
-  position: absolute;;
-  background: yellow;
+  // border: solid 10px salmon;
   bottom: 0;
 }
 
@@ -160,15 +158,19 @@ img {
 .team-box {
   // display: inline-block;
   width: 25%;
-  border: solid 3px blue;
+  // border: solid 3px blue;
 }
 
 img.our-team-pic {
   width: 150px;
   height: 150px;
-  border: 3px solid red;
+  // border: 3px solid red;
   border-radius: 50%;
-  float: left;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  display: flex;
 }
 
 //
@@ -186,27 +188,41 @@ img.our-team-pic {
 //   border-radius: 50%;
 // }
 
+h1 {
+  font-size: 3rem !important;
+  font-weight: bold !important;
+}
+
 h2 {
   font-family: "Avenir Next" !important;
   width: 70%;
-  float: left;
   width: 100%;
+  font-size: 1.56rem !important;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 h3 {
   font-family: "Avenir Next" !important;
-  width: 50%;
-  float: left;
+  width: 100%;
+  font-size: 1rem !important;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 p {
   font-family: "Avenir Next";
   width: 70%;
-  float: left;
   overflow: hidden;
-  margin-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 10px;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  margin: auto;
 }
 //
 // .github .linkedin .twitter {

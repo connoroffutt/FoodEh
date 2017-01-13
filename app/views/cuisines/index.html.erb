@@ -1,11 +1,13 @@
-    <%= video_tag "FoodEh_Header_Video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class:"header-video" %>
-    <div class="cuisine-searchbar">
-      <%= form_tag recipes_path, :method => 'get' do %>
-        <p>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search for Recipes", :name => nil %>
-        </p>
-      <% end %>
+    <div class="video-searchbar-header">
+      <%= video_tag "FoodEh_Header_Video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class:"header-video" %>
+      <div class="cuisine-searchbar">
+        <%= form_tag recipes_path, :method => 'get' do %>
+          <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search for Recipes", :name => nil %>
+          </p>
+        <% end %>
+      </div>
     </div>
        <!-- <video class="header-video" loop muted autoplay>
          <source src="/videos/FoodEh_Header_Video.mp4" type="video/mp4">
@@ -28,7 +30,7 @@
     </div>
 
 
-    <!-- <div id="our-team-container">
+    <div id="our-team-container">
       <h1 class="our-team-header">Team FoodEh</h1>
       <div class="membcontainer">
         <div class="team-box">
@@ -50,4 +52,4 @@
           <p class="team-description">Enter short description</p>
         </div>
       </div>
-    </div> -->
+    </div>

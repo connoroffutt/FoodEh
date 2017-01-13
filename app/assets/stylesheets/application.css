@@ -171,7 +171,12 @@ a.modal-action {
 }
 
 .logo-pic {
-  width: 300px;
+  width: 40%;
+  height: auto;
+  position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
+  bottom: 0;
 }
 
 
