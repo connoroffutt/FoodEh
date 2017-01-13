@@ -159,18 +159,24 @@ img {
   text-align: center;
 }
 
-.our-team-container {
+#our-team-container {
   width: 100%;
-  margin-right: 10%;
-  margin-bottom: 10%;
+  margin: auto;
+  // margin-bottom: 10%;
+  border: solid 10px salmon;
+  position: absolute;
+  background: yellow;
 }
 
 .team-box {
   padding: 3px;
   float: left;
   margin: 25px;
+  margin-left: 7%;
   position: relative;
-  display: inline-block;
+  // display: inline-block;
+  width: 25%;
+  border: solid 3px blue;
 }
 
 
