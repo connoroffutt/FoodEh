@@ -26,16 +26,18 @@
 <div class="cuisinecontainer">
   <a id="cuisine-link-target"></a>
   <h1 class="cuisine-h1">Cuisines</h1>
-    <% @cuisines.each do |cuisine| %>
-      <div class="cuisinebuttons">
-        <div class="cuisine-name"><%= link_to cuisine.name.upcase, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
-        <div class="cuisine-image"><%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %></div>
-      </div>
+    <div class="all-cuisines">
+      <% @cuisines.each do |cuisine| %>
+        <div class="cuisinebuttons">
+          <div class="cuisine-name"><%= link_to cuisine.name.upcase, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
+          <div class="cuisine-image"><%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %></div>
+        </div>
 
-       <!-- <p class="cuisinebuttons"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %>
-          <%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %>
-       </p> -->
-   <% end %>
+         <!-- <p class="cuisinebuttons"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %>
+            <%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %>
+         </p> -->
+     <% end %>
+    </div>
 
 </div>
 
