@@ -1,19 +1,16 @@
 // Place all the styles related to the Cuisines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.responsive-video {
-  height: 500px;
-}
-
 .header-video {
-  position: relative;
-  top: 50%; left: 50%;
-  z-index: -2;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  // position: relative;
+  // top: 50%; left: 50%;
+  // z-index: -2;
+  // min-width: 100%;
+  // min-height: 100%;
+  // width: auto;
+  // height: auto;
+  // transform: translate(-50%, -50%);
   /*top: 0;
   left: 0;
   width: 100%;
@@ -35,29 +32,27 @@
 .cuisine-h1 {
   text-align: center;
   font-size: 50px;
-  margin: auto;
-  padding: 100px;
-  // font-weight: bold;
-  // text-transform: uppercase;
+  // padding: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
   font-family: "Avenir Next" !important;
 }
 
 .all-cuisines {
-  margin-left: 25%;
   width: 75%;
-  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto
 }
 
 .cuisinebuttons {
   padding: 10px;
-  width: 400px;
+  width: 250px;
   height: 17em;
   margin: 5% auto;
-  float: left;
   overflow: hidden;
-  left: 3%;
-  right: 3%;
-
   // border-radius: 5px;
   // background-color: #fff;
   // box-shadow: 0 1px 2px rgba(0,0,0,0.15);
@@ -85,7 +80,6 @@
   opacity: 1;
 }
 
-
 img {
   width: 100%;
   height: 90%;
@@ -94,9 +88,7 @@ img {
 .cuisine-image {
   padding: 5px 5px;
   width: 350px;
-
   max-height: 100%;
-
   display: inline-block;
   margin-top: 10px;
   position: relative;
@@ -105,15 +97,12 @@ img {
 .cuisine-name {
   text-align: center;
   margin: auto;
-  position: relative;
 }
 
 .cuisinecontainer {
-  padding-left: 1%;
-  padding-bottom: 5%;
-  margin-top: 125px;
+  width: 100%;
+  border: solid 4px blue;
 }
-
 
 // .cuisinebuttons {
 //   border-radius: 20px;
@@ -132,12 +121,10 @@ img {
 //   font-family: "Avenir Next" !important;
 //   margin-left: 20px;
 // }
-
 // p.cuisinebuttons a:link, p.cuisinebuttons a:visited, p.cuisinebuttons a:focus, p.cuisinebuttons a:active {
 //   text-decoration: none;
 //   color: black;
 // }
-
 // .cuisinebuttons:hover {
 //   background-color: rgba(255, 10, 0, 0.6);
 //   text-decoration: none;
@@ -149,37 +136,32 @@ img {
 //   text-decoration: none;
 // }
 
-
-
 .our-team-header {
   margin-bottom: 10px;
   display: inline-block;
   width: 100%;
-  float: left;
   text-align: center;
 }
 
 #our-team-container {
   width: 100%;
-  margin: auto;
-  // margin-bottom: 10%;
   border: solid 10px salmon;
-  position: absolute;
+  position: absolute;;
   background: yellow;
+  bottom: 0;
+}
+
+.membcontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
 }
 
 .team-box {
-  padding: 3px;
-  float: left;
-  margin: 25px;
-  margin-left: 7%;
-  position: relative;
   // display: inline-block;
   width: 25%;
   border: solid 3px blue;
 }
-
-
 
 img.our-team-pic {
   width: 150px;
@@ -188,6 +170,7 @@ img.our-team-pic {
   border-radius: 50%;
   float: left;
 }
+
 //
 // img.our-team-pic-connor {
 //   width: 150px;
@@ -231,73 +214,50 @@ p {
 //   border: solid lightgrey;
 // }
 
-@media only screen and (max-width: 1215px) {
-
-  .cuisinebuttons {
-    left: 15%;
-  }
-
-}
-
-@media only screen and (max-width: 1075px) {
-
-  .cuisinebuttons {
-    left: 10%;
-  }
-
-}
-
-@media only screen and (max-width: 950px) {
-
-  .cuisinebuttons {
-    left: 5%;
-  }
-
-}
-
-@media only screen and (max-width: 810px) {
-
-  .cuisinebuttons {
-    left: 27.5%;
-  }
-
-}
-
-@media only screen and (max-width: 700px) {
-
-
-  .cuisinebuttons {
-    left: 22.5%;
-  }
-
-}
-
-
-@media only screen and (max-width: 600px) {
-
-
-  .cuisinebuttons {
-    left: 17.5%;
-  }
-
-}
-
-
-@media only screen and (max-width: 500px) {
-
-
-  .cuisinebuttons {
-    left: 10%;
-  }
-
-}
-
-
-@media only screen and (max-width: 425px) {
-
-
-  .cuisinebuttons {
-    left: 2.5%;
-  }
-
-}
+// @media only screen and (max-width: 1215px) {
+//   .cuisinebuttons {
+//     left: 15%;
+//   }
+// }
+//
+// @media only screen and (max-width: 1075px) {
+//   .cuisinebuttons {
+//     left: 10%;
+//   }
+// }
+//
+// @media only screen and (max-width: 950px) {
+//   .cuisinebuttons {
+//     left: 5%;
+//   }
+// }
+//
+// @media only screen and (max-width: 810px) {
+//   .cuisinebuttons {
+//     left: 27.5%;
+//   }
+// }
+//
+// @media only screen and (max-width: 700px) {
+//   .cuisinebuttons {
+//     left: 22.5%;
+//   }
+// }
+//
+// @media only screen and (max-width: 600px) {
+//   .cuisinebuttons {
+//     left: 17.5%;
+//   }
+// }
+//
+// @media only screen and (max-width: 500px) {
+//   .cuisinebuttons {
+//     left: 10%;
+//   }
+// }
+//
+// @media only screen and (max-width: 425px) {
+//   .cuisinebuttons {
+//     left: 2.5%;
+//   }
+// }

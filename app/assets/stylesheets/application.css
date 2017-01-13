@@ -13,10 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-
-
-
 * {
   padding: 0;
   left: 0;
@@ -269,4 +265,8 @@ p.nav-text {
   margin-top: 2px;
 
   }
+}
+
+footer {
+  text-align: center;
 }
