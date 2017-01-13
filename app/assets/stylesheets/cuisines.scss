@@ -170,34 +170,38 @@ img {
   float: left;
   margin: 25px;
   position: relative;
-
+  display: inline-block;
 }
 
-img.our-team-pic-andrea {
+
+
+img.our-team-pic {
   width: 150px;
   height: 150px;
   border: 3px solid red;
   border-radius: 50%;
+  float: left;
 }
-
-img.our-team-pic-connor {
-  width: 150px;
-  height: 150px;
-  border: 3px solid red;
-  border-radius: 50%;
-}
-
-img.our-team-pic-jas {
-  width: 150px;
-  height: 150px;
-  border: 3px solid red;
-  border-radius: 50%;
-}
+//
+// img.our-team-pic-connor {
+//   width: 150px;
+//   height: 150px;
+//   border: 3px solid red;
+//   border-radius: 50%;
+// }
+//
+// img.our-team-pic-jas {
+//   width: 150px;
+//   height: 150px;
+//   border: 3px solid red;
+//   border-radius: 50%;
+// }
 
 h2 {
   font-family: "Avenir Next" !important;
   width: 70%;
   float: left;
+  width: 100%;
 }
 
 h3 {
