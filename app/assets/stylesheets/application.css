@@ -22,6 +22,7 @@
   left: 0;
   margin: 0;
   font-family: "Avenir Next" !important;
+  box-sizing: border-box;
 }
 
 input#search {
