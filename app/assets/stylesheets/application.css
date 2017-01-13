@@ -55,31 +55,28 @@ input#search {
 
 
 a.modal-action {
-  float: left !important;
   margin: auto !important;
-  bottom: 40px !important;
-  left: 225px !important;
+  bottom: 40% !important;
+  margin-left: 30% !important;
+  width: 120px;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .modal-footer {
-  width: 50% !important;
+  width: 62% !important;
 }
 
 #signup-button {
   background-color: #c62828;
-  padding: 20px;
-  padding-left: 80px;
-  bottom: 30px;
-  left: 72px;
+  bottom: 58%;
   color: white;
-  float: right;
-}
-
-.signup-text {
-  position: relative;
-  left: 246px;
-  bottom: 35px;
-  z-index: 1;
+  margin: auto;
+  align-items: flex-start;
+  text-align: center;
+  width: 120px;
+  margin-left: 30%;
+  overflow-y: hidden;
 }
 
 .site-nav {
