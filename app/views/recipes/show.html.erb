@@ -9,11 +9,12 @@
   <div class="recipe-instructions">
     <%= link_to("Cooking Instructions", @recipe.recipe_construction) %>
   </div>
-<div class="add-fav-button">
-  <% if current_user %>
-  <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>
-  <% end %>
-</div>
+
+  <div class="add-fav-button">
+    <% if current_user %>
+    <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>
+    <% end %>
+  </div>
 
 <ul class="recipe-ingredients">
   <% @recipe.ingredients.each do |ingredient| %>

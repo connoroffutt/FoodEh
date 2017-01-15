@@ -1,11 +1,8 @@
     <div class="video-searchbar-header">
       <%= video_tag "FoodEh_Header_Video.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class:"header-video" %>
-      <div class="cuisine-searchbar">
         <%= form_tag recipes_path, :method => 'get' do %>
-          <p class="searchbar">
             <%= text_field_tag :search, params[:search] %>
             <%= submit_tag "Search for Recipes", :name => nil %>
-          </p>
         <% end %>
       </div>
       <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
