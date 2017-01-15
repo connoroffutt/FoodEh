@@ -54,7 +54,7 @@ input#search {
 }
 
 label {
-  color: white !important;
+  color: grey !important;
 }
 
 a.modal-action {
@@ -186,7 +186,7 @@ a.modal-action {
 .logo {
   color: white;
   position: absolute;
-  top: 220px;
+  top: 150px;
   width: 100%;
   height: 126px;
   text-align: center;

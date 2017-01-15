@@ -1,3 +1,5 @@
+
+
 <div class="site-header"> </div>
 
 
@@ -9,33 +11,33 @@
   <div class="recipe-instructions">
     <%= link_to("Cooking Instructions", @recipe.recipe_construction) %>
   </div>
-<div class="add-fav-button">
-  <% if current_user %>
-  <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>
-  <% end %>
-</div>
+
+  <div class="add-fav-button">
+    <% if current_user %>
+    <a class="recipe-show-image"><%= link_to 'Add to Favorites', favorites_path(recipe_id: @recipe), method: :post %></a>
+    <% end %>
+  </div>
 
 <ul class="recipe-ingredients">
   <% @recipe.ingredients.each do |ingredient| %>
     <li class="ingredients"><%= ingredient.description %>
     <% if current_user%>
     <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
-      <%= f.submit "Add Ingredient" %>
+    <button class="add-ing" type="submit" name="action"><img src="add-ing.png" alt="">Add Ingredient
+    </button>
       <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
     <% end %>
     <% end %>
   <% end %>
 </ul>
-
 <h3 class="review-section-header">Reviews</h3>
 
 
 <% @recipe.reviews.each do |review| %>
-  <p class="new-reviews"><b>
-    <%= review.comment %></b>
+  <p class="new-reviews">
+    <b><%= review.comment %></b>
     <% if review.user != nil %>
-      <em> by <%= review.user.email %></em>
-      Added on: <%= review.created_at %>
+      <em> by <%= review.user.first_name %></em>
     <% end %>
   </p>
 <% end %>
@@ -44,17 +46,17 @@
     <h4 class="new-review-header">Write a New Review</h4>
 
     <%= form_for([@recipe, @review]) do |f|%>
-
-
-      <div class="field">
+      <div class="form">
         <%= f.label :comment %><br />
         <%= f.text_area :comment %>
       </div>
-      <div class="actions">
-        <%= f.submit %>
+      <div class="sub-cancel_button center-align">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        </button>
       </div>
-
     <% end %>
+  </br>
+  </br>
 
     <% else %>
       <p>Please <%= link_to "log in", new_user_session_path %> to add a review </p>
