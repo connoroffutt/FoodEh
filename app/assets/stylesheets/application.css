@@ -49,6 +49,17 @@ input#search {
   background-color: #c62828 !important;
 }
 
+.input-field label {
+  color: white !important;
+}
+
+label::before {
+  color: #c62828 !important;
+}
+
+label::after {
+  color: white !important;
+}
 
 a.modal-action {
   margin: auto !important;

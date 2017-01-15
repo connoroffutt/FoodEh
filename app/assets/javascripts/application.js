@@ -21,8 +21,8 @@ $(document).ready(function(){
 });
 
 if(scroll_start > offset.top) {
-    $(".site-nav").addClass(".fixed-site-nav");
+    $(".site-nav").addClass("fixed-site-nav");
   }
   else {
-    $(".site-nav").removeClass(".fixed-site-nav");
+    $(".site-nav").removeClass("fixed-site-nav");
   }
