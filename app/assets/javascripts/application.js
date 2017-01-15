@@ -17,6 +17,12 @@
 //= require_tree .
 
 $(document).ready(function(){
-  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal();
 });
+
+if(scroll_start > offset.top) {
+    $(".site-nav").addClass("fixed-site-nav");
+  }
+  else {
+    $(".site-nav").removeClass("fixed-site-nav");
+  }

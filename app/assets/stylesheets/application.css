@@ -13,27 +13,23 @@
  *= require_tree .
  *= require_self
  */
-
-
-
-
 * {
   padding: 0;
   left: 0;
   margin: 0;
   font-family: "Avenir Next" !important;
+  box-sizing: border-box;
 }
 
 input#search {
   border-bottom: 1px solid red;
+  position: relative;
 }
 
 
 #login-button {
   padding: 3px 15px;
   font-size: 13px;
-  /*color: #fff;*/
-  font-family: brandon-grotesque,sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1em;
@@ -45,14 +41,21 @@ input#search {
   float: right;
   font-size: 18px;
   text-decoration: none;
-  padding-top: 0px;
+  margin-right: 35px;
   margin-left: 0px;
-  margin-right: -px;
   margin-bottom: 0px;
-  margin-top: 4px;
+  margin-top: 28px;
   text-shadow: 2px 2px grey;
+  background-color: #c62828 !important;
 }
 
+.input-field label {
+  color: white !important;
+}
+
+label {
+  color: white !important;
+}
 
 a.modal-action {
   margin: auto !important;
@@ -85,10 +88,14 @@ a.modal-action {
   float: right;
   top: 0%;
   width: 100%;
-  height: 100px;
+  height: 95px;
   z-index: 1;
   line-height: 24px !important;
+}
 
+.fixed-site.nav {
+  background:#24363d;
+  opacity:0.3;
 }
 
 .nav-logo-pic {
@@ -99,6 +106,7 @@ a.modal-action {
   top: 10px;
   position: relative;*/
   z-index: -100;
+  padding: 10px;
 }
 
 .logo-link {
@@ -165,14 +173,25 @@ a.modal-action {
 .logo {
   color: white;
   position: absolute;
-  top: 35%;
+  top: 220px;
   width: 100%;
   height: 126px;
   text-align: center;
+  margin: auto;
 }
 
 .logo-pic {
-  width: 300px;
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -266,4 +285,13 @@ p.nav-text {
   margin-top: 2px;
 
   }
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  background-color: #c62828;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
