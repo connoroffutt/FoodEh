@@ -26,10 +26,9 @@ input#search {
   position: relative;
 }
 
-#signup-button{
-
-  background-color: #c62828 !important;
-
+#form_sign_up_button{
+    background-color: #c62828 !important;
+    margin: 0;
 }
 
 #login-button {
