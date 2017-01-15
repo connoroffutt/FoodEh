@@ -19,3 +19,10 @@
 $(document).ready(function(){
   $('.modal-trigger').leanModal();
 });
+
+if(scroll_start > offset.top) {
+    $(".site-nav").addClass(".fixed-site-nav");
+  }
+  else {
+    $(".site-nav").removeClass(".fixed-site-nav");
+  }
