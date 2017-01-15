@@ -19,10 +19,12 @@
         <div class="nav-text">
           Signed in as: <%= current_user.first_name %>
         </div>
-        <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
-        <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
-        <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
-        <%= link_to "Cuisines", '/#cuisine-link-target', class: "nav-button" %></p>
+          <!-- <div class="nav-links-container"> -->
+            <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
+            <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
+            <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
+            <%= link_to "Cuisines", '/#cuisine-link-target', class: "nav-button" %>
+          <!-- </div> -->
       <% else %>
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
         <!-- <%= link_to "Sign Up", new_user_path, class: "nav-button" %> -->

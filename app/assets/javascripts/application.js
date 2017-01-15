@@ -20,9 +20,23 @@ $(document).ready(function(){
   $('.modal-trigger').leanModal();
 });
 
-if(scroll_start > offset.top) {
-    $(".site-nav").addClass("fixed-site-nav");
-  }
-  else {
-    $(".site-nav").removeClass("fixed-site-nav");
-  }
+// if(scroll_start > offset.top) {
+//     $(".site-nav").addClass("fixed-site-nav");
+//   }
+//   else {
+//     $(".site-nav").removeClass("fixed-site-nav");
+//   }
+
+$(document).ready(function($) {
+  $(window).scroll(function() {
+    var scrollDown = $(window).scrollTop(),
+      navbar = $('.site-nav');
+
+    if (scrollDown > 500) {
+      navbar.addClass('alt-color')
+    }
+    else {
+      navbar.removeClass('alt-color');
+    }
+  });
+});
