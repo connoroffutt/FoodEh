@@ -1,8 +1,8 @@
-
-
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
 <div class="site-header"> </div>
-
-
 <h1><%= @recipe.name %></h1>
   <div class="recipe-show">
     <%=link_to(image_tag(@recipe.recipe_picture)) %>
@@ -57,6 +57,9 @@
     <% end %>
   </br>
   </br>
+
+
+
 
     <% else %>
       <p>Please <%= link_to "log in", new_user_session_path %> to add a review </p>

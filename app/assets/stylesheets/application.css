@@ -26,6 +26,11 @@ input#search {
   position: relative;
 }
 
+#signup-button{
+
+  background-color: #c62828 !important;
+
+}
 
 #login-button {
   padding: 3px 15px;
