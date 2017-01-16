@@ -6,17 +6,19 @@
         <% end %>
       </div>
       <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
-    </div>
        <!-- <video class="header-video" loop muted autoplay>
          <source src="/videos/FoodEh_Header_Video.mp4" type="video/mp4">
        </video> -->
+    <a id="cuisine-link-target"></a>
     <div class="cuisinecontainer">
-      <!-- <a id="cuisine-link-target"></a> -->
+    <br>
+    <br>
+    <br>
       <h1 class="cuisine-h1">Cuisines</h1>
       <div class="all-cuisines">
         <% @cuisines.each do |cuisine| %>
           <div class="cuisinebuttons">
-            <div class="cuisine-name"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
+            <div class="cuisine-name"><%= link_to cuisine.name.upcase, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %></div>
             <div class="cuisine-image"><%= link_to(image_tag("#{cuisine.image_url}"), "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}") %></div>
           </div>
                <!-- <p class="cuisinebuttons"><%= link_to cuisine.name, "/recipes?utf8=%E2%9C%93&search=#{cuisine.name}" %>
