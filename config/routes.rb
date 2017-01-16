@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
+  get 'lists/show'
   post '/list/add' => 'lists#add', :as => :list_add
   delete '/list/:ingredient_id' => 'lists#destroy_ingredient', :as => :list_destroy_ingredient
 

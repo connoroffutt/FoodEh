@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>FoodEh</title>
+  </head>
+
+<h4 class="user-list-title"> Your Grocery List </h4>
+    <div class="user-list">
+     <% if current_user.list == nil %>
+        <%= "No Ingredients Selected." %>
+     <% elsif current_user.list.ingredients.empty? %>
+        <%= "No Ingredients Selected." %>
+     <% else %>
+     <% current_user.list.ingredients.each do |ingredient| %>
+       <li class="ingredients-user-page"><%= ingredient.description %>
+     <% end %>
+     <% end %>
+   </div>
+
+<%= link_to 'Back to User Page', user_path(current_user), method: :get %>
+
+</html>
