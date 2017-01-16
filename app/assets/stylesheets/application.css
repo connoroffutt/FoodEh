@@ -39,6 +39,9 @@
 input#search {
   border-bottom: 1px solid red;
   position: relative;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 1px darkgrey;
 }
 
 .recipe-topper {
