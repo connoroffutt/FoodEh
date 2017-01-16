@@ -21,6 +21,15 @@
   box-sizing: border-box;
 }
 
+.card-action a{
+  color: red !important;
+  font-weight: bold;
+}
+
+.row{
+  text-align: center;
+}
+
 .site-header {
   background-image: url("/assets/backgrounds_for_header/3_pasta.jpeg");
   /*background-image: url("https://static1.squarespace.com/static/532ed214e4b078ca803b832f/t/569bd0c5c647addf69b495c3/1453052102928/food+spread");*/
