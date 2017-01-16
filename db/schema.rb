@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 20170112173337) do
     t.string   "f2f_id"
     t.string   "name"
     t.string   "description"
+    t.string   "image_url"
+    t.string   "source_url"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "recipe_construction"
