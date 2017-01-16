@@ -15,31 +15,53 @@
 
     </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" />
 </head>
+
 <body>
   <div class="site-header"></div>
+  <h1> Welcome to your FoodEh profile, <%= current_user.first_name %>! </h1>
+  <h1 class="user-favorites-title"> Your Favorite Recipes </h1>
 
-
-<h1> Welcome to your FoodEh profile, <%= current_user.first_name %>! </h1>
-
-
-<h1 class="user-favorites-title"> Your Favorite Recipes </h1>
-
-<div class="user-favorites">
+  <div class="user-favorites">
    <% current_user.favorites.each do |favorite| %>
     <li><%=link_to favorite.recipe.name, favorite_path(favorite.id)%></li>
    <br>
    <% end %>
-</div>
-
-<%= link_to 'Print Your Grocery List', lists_show_path, method: :get %>
+  </div>
 
 
-<h1 class="user-list-title"> Your Grocery List </h1>
+  <div class="row">
+        <div class="col s12 m6">
+          <div class="card white">
+            <div class="card-content black-text">
+              <span class="card-title">Your Grocery List</span>
+              <p>
+              <% if current_user.list == nil %>
+                <%= "No Ingredients Selected." %>
+              <% elsif current_user.list.ingredients.empty? %>
+                <%= "No Ingredients Selected." %>
+              <% else %>
+              <% current_user.list.ingredients.each do |ingredient| %>
+                <li class="ingredients-user-page"><%= ingredient.description %>
+                <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
+                  <%= f.submit "" %>
+                  <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
+                <% end %>
+              <% end %>
+              <% end %>
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="/lists/show">Want To Print Your Grocery List?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <h1 class="user-list-title"> Your Grocery List </h1>
     <div class="user-list">
-     <% if current_user.list == nil %>
+    <% if current_user.list == nil %>
         <%= "No Ingredients Selected." %>
      <% elsif current_user.list.ingredients.empty? %>
         <%= "No Ingredients Selected." %>
