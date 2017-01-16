@@ -1,0 +1,22 @@
+
+.user-list-title {
+  text-align: center;
+}
+
+.user-list {
+  background-image: url("fancy_paper.jpg") !important;
+  max-width: 500px;
+  margin-left: 33%;
+  min-height: 800px;
+}
+
+.user-list li {
+  list-style: none;
+  padding-left: 5px;
+  font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;
+}
+
+.user-list h4 {
+  font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;
+  padding-top: 6px;
+}

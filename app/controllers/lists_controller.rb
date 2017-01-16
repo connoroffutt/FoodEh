@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    render :layout => false
     list = List.find_by(user: current_user)
+    render :layout => false
   end
 end
