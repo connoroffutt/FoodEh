@@ -22,54 +22,43 @@
   <div class="site-header"></div>
   <h1> Welcome to your FoodEh profile, <%= current_user.first_name %>! </h1>
 
+  <h2 class="fav-recipes-title">Your Favourite Recipes</h2>
+  <div class="fav-recipes-container">
+    <div class="fav-recipes">
+      <% current_user.favorites.each do |favorite| %>
+       <%= link_to favorite.recipe.name, favorite_path(favorite.id)%>
+       <%= link_to 'Remove from favorites', favorite_path(favorite.id), method: :delete, class: "favs-delete" %>
+      <% end %>
+    </div>
 
-  <div class="row">
-    <div class="col s12 m4 offset-l4">
-      <div class="card white">
-        <div class="card-content black-text">
-          <span class="card-title">Your Faveorite Recipes</span>
-          <p>
-            <% current_user.favorites.each do |favorite| %>
-             <%= link_to favorite.recipe.name, favorite_path(favorite.id)%>
-             <%= link_to 'Remove from favorites', favorite_path(favorite.id), method: :delete %>
-            <br>
+  </div>
+  <div class="no-favs">
+    <a href="/">No Faves? It's Ok! Add Some!</a>
+  </div>
+
+  <h2 class="grocery-list-title">Your Grocery List</h2>
+  <div class="grocery-list-container">
+    <div class="grocery-list">
+      <% if current_user.list == nil %>
+        <%= "No Ingredients Selected." %>
+      <% elsif current_user.list.ingredients.empty? %>
+        <%= "No Ingredients Selected." %>
+      <% else %>
+        <% current_user.list.ingredients.each do |ingredient| %>
+          <li class="ingredients-user-page"><%= ingredient.description %>
+            <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
+            <%= f.submit "" %>
+            <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
             <% end %>
-          </p>
-        </div>
-      <div class="card-action">
-        <a href="/">No Faves? It's Ok! Add Some :)</a>
-      </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
-</div>
 
-  <div class="row">
-        <div class="col s12 m4 offset-l4">
-          <div class="card white">
-            <div class="card-content black-text">
-              <span class="card-title">Your Grocery List</span>
-              <p>
-              <% if current_user.list == nil %>
-                <%= "No Ingredients Selected." %>
-              <% elsif current_user.list.ingredients.empty? %>
-                <%= "No Ingredients Selected." %>
-              <% else %>
-              <% current_user.list.ingredients.each do |ingredient| %>
-                <li class="ingredients-user-page"><%= ingredient.description %>
-                <%= form_for(ingredient, url: list_destroy_ingredient_url(ingredient), html:{method: "delete"}) do |f| %>
-                  <%= f.submit "" %>
-                  <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
-                <% end %>
-              <% end %>
-              <% end %>
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="/lists/show">Want To Print Your Grocery List?</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="print-list">
+    <a href="/lists/show">Print Your Grocery List!</a>
+  </div>
+
 
 
 </br>

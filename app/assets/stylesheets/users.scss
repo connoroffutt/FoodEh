@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
-  font-family: "Avenir Next" !important;;
+  font-family: "Avenir Next" !important;
   font-size: 50px;
   text-align: center;
   padding-top: 5px;
@@ -32,7 +32,7 @@ li {
 
 div#map {
   left: 10%;
-  border: 2px solid red;
+  // border: 2px solid red;
 }
 
 h1.map-topper {
@@ -41,6 +41,78 @@ h1.map-topper {
   text-align: center;
   padding-top: 5px;
   margin-left: 10px;
+}
+
+.fav-recipes-title {
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 10%;
+}
+
+.fav-recipes-container {
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  // border: solid 3px red;
+  height: auto;
+}
+
+.fav-recipes a {
+  align-items: center;
+  margin: auto;
+  text-align: center !important;
+  color: black;
+  padding: 5px;
+  width: 250px;
+  height: auto;
+  display: block;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.no-favs a {
+  background-color: #c62828;
+  color: white !important;
+  align-items: center !important;
+  position: relative;
+  margin: auto!important;
+  align-items: center !important;
+  border: solid 3px blue;
+}
+
+.favs-delete {
+  background-color: #c62828;
+  color: white !important;
+}
+
+.grocery-list-title {
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 10%;
+}
+
+.grocery-list-container {
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  // border: solid 3px red;
+}
+
+.print-list a {
+  background-color: #c62828;
+  border: solid 3px blue;
+  color: white !important;
+  margin: auto !important;
+  align-items: center !important;
+}
+
+.edit_ingredient input {
+  min-width: 50px;
+  min-height: 40px;
+  background: url('delete-icon.png');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border: none;
 }
 
 .user-list {
@@ -54,11 +126,22 @@ h1.map-topper {
 
 
 li.ingredients-user-page {
-  float: left;
-  left: 0;
-  width: 100%;
-  list-style: none;
-  text-align: center;
+  // left: 0;
+  // width: 100%;
+  // list-style: none;
+  // text-align: center;
+  // font-family: "Avenir Next" !important;
+
+  align-items: center;
+  margin: auto;
+  text-align: center !important;
+  color: black;
+  padding: 5px;
+  width: 250px;
+  height: auto;
+  display: block;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 .user-list-title {
@@ -90,16 +173,7 @@ li.ingredients-user-page {
   padding-left: 2%;
 }
 
-li {
-  font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;;
-  color: #333;
-}
-
-.user-list input {
-  min-width: 50px;
-  min-height: 40px;
-  background: url('delete-icon.png');
-  background-size: 40px 40px;
-  background-repeat: no-repeat;
-  border: none;
-}
+// li {
+//   font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;;
+//   color: #333;
+// }
