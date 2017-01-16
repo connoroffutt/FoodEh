@@ -1,9 +1,6 @@
 // Place all the styles related to the Cuisines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.video-searchbar-header {
-  position: relative;
-}
 
 .header-video {
   width: 100%;
@@ -11,6 +8,7 @@
   // top: 50%; left: 50%;
   // z-index: -2;
   min-width: 960px;
+  min-height: 100%;
   // min-height: 100%;
   // width: auto;
   // height: auto;
@@ -38,16 +36,18 @@
 .video-searchbar-header input {
   background-color: none;
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 45%;
+
 }
 
 .video-searchbar-header input#search {
   position: absolute;
   max-width: 33%;
-  top: 60%;
+  top: 65%;
   left: 33%;
   right: 33%;
+  color: white;
 }
 
 .cuisine-h1 {
