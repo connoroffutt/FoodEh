@@ -33,8 +33,10 @@
    <% end %>
 </div>
 
-<h1 class="user-list-title"> Your Grocery List </h1>
+<%= link_to 'Print Your Grocery List', lists_show_path, method: :get %>
 
+
+<h1 class="user-list-title"> Your Grocery List </h1>
     <div class="user-list">
      <% if current_user.list == nil %>
         <%= "No Ingredients Selected." %>
