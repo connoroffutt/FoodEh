@@ -26,7 +26,7 @@
   /*background-image: url("https://static1.squarespace.com/static/532ed214e4b078ca803b832f/t/569bd0c5c647addf69b495c3/1453052102928/food+spread");*/
   height: 500px;
   width: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   border: 0;
@@ -39,6 +39,9 @@
 input#search {
   border-bottom: 1px solid red;
   position: relative;
+  color: grey;
+  font-weight: bold;
+  /*text-shadow: 2px 1px darkgrey;*/
 }
 
 .recipe-topper {
@@ -257,12 +260,6 @@ a.modal-action {
 @media only screen and (max-width: 700px) {
 
   .nav-button {
-  border-style: solid;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  color: black;
-  background-color: rgba(255, 100, 100, 0.75);
-  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   font-style: normal;
@@ -341,12 +338,6 @@ p.nav-text {
 @media only screen and (max-width: 450px) {
 
   .nav-button {
-  border-style: solid;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  color: black;
-  background-color: rgba(255, 100, 100, 0.75);
-  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   font-style: normal;

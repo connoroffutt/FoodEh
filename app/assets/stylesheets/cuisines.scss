@@ -1,7 +1,6 @@
 // Place all the styles related to the Cuisines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .header-video {
   width: 100%;
   // position: relative;
@@ -36,17 +35,18 @@
 .video-searchbar-header input {
   background-color: none;
   position: absolute;
-  top: 75%;
+  top: 60%;
   left: 45%;
 }
 
 .video-searchbar-header input#search {
   position: absolute;
   max-width: 33%;
-  top: 65%;
+  top: 50%;
   left: 33%;
   right: 33%;
-  color: white;
+  color: white !important;
+  text-shadow: 2px 1px darkgrey;
 }
 
 .cuisine-h1 {
@@ -256,20 +256,55 @@ p {
   margin: auto;
 }
 
-.github-logo {
-  max-width: 40px;
-  max-height: 40px;
-  margin-left: 70px;
+// .github-logo {
+//   max-width: 40px;
+//   max-height: 40px;
+//   margin-left: 70px;
+// }
+//
+// .linkedin-logo {
+//   max-width: 40px;
+//   max-height: 40px;
+//   margin-left: 25px;
+// }
+//
+// .twitter-logo {
+//   max-width: 40px;
+//   max-height: 40px;
+//   margin-left: 25px;
+// }
+
+
+
+// .twitter-logo{
+//   width: 20px;
+//   height: auto;
+//   justify-content: space-around;
+//   text-align: center;
+//   flex-wrap: wrap;
+//   display: flex;
+// }
+
+.team-links {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .linkedin-logo {
-  max-width: 40px;
-  max-height: 40px;
-  margin-left: 25px;
+  width: 20px;
+  height: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 5px;
 }
 
-.twitter-logo {
-  max-width: 40px;
-  max-height: 40px;
-  margin-left: 25px;
+.github-logo {
+  width: 25px;
+  height: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 5px;
 }
