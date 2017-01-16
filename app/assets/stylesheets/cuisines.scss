@@ -82,6 +82,10 @@
   display: inline-block;
 }
 
+.cuisine-name a {
+  color: black !important;
+}
+
 .cuisinebuttons::after {
   position: absolute;
   z-index: -1;
@@ -253,36 +257,20 @@ p {
   margin: auto;
 }
 
-
-.team-links {
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-  display: flex;
-  margin: auto;
-  padding: 15px;
-}
-
 .github-logo {
-  width: 20px;
-  height: auto;
-  margin: auto;
-  position: relative;
-  display: inline-block;
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 70px;
 }
 
 .linkedin-logo {
-  width: 19px;
-  height: auto;
-  margin: auto;
-  position: relative;
-  display: inline-block;
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 25px;
 }
 
 .twitter-logo {
-  width: 25px;
-  height: auto;
-  margin: auto;
-  position: relative;
-  display: inline-block;
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 25px;
 }

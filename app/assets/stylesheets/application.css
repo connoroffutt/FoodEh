@@ -45,6 +45,10 @@ input#search {
   text-transform: capitalize !important;
 }
 
+#form_sign_up_button{
+    background-color: #c62828 !important;
+    margin: 0;
+}
 
 #login-button {
   padding: 3px 15px;

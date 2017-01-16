@@ -94,3 +94,12 @@ li {
   font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;;
   color: #333;
 }
+
+.user-list input {
+  min-width: 50px;
+  min-height: 40px;
+  background: url('delete-icon.png');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border: none;
+}

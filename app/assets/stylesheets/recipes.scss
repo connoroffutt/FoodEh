@@ -6,6 +6,10 @@ html {
   overflow-x: hidden;
 }
 
+.recipe-title a {
+  color: black !important;;
+}
+
 .recipe-instructions {
   position: relative;;
   left: 43%;
@@ -114,6 +118,20 @@ h3.review-section-header {
 p.new-reviews {
   width: 100%;
 }
+
+button.add-ing {
+  min-width: 45px;
+  min-height: 37.5px;
+  background: url('add_ing.png');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border: 0;
+}
+
+.btn {
+  background-color: red !important;;
+}
+
 
 @media only screen and (max-width: 1100px) {
 
