@@ -35,7 +35,7 @@
 .video-searchbar-header input {
   background-color: none;
   position: absolute;
-  top: 75%;
+  top: 60%;
   left: 45%;
 
 }
@@ -43,10 +43,11 @@
 .video-searchbar-header input#search {
   position: absolute;
   max-width: 33%;
-  top: 65%;
+  top: 50%;
   left: 33%;
   right: 33%;
-  color: white;
+  color: white !important;
+  text-shadow: 2px 1px darkgrey;
 }
 
 .cuisine-h1 {

@@ -18,18 +18,21 @@
     <% end %>
   </div>
 
-<ul class="recipe-ingredients">
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li class="ingredients"><%= ingredient.description %>
-    <% if current_user%>
-    <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
-    <button class="add-ing" type="submit" name="action">
-    </button>
-      <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
-    <% end %>
-    <% end %>
-  <% end %>
-</ul>
+    <ul class="recipe-ingredients">
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li class="ingredients"><%= ingredient.description %>
+        <% if current_user%>
+        <%= form_for(ingredient, url: list_add_url, html:{method: "post"}) do |f| %>
+        <button class="add-ing" type="submit" name="action">
+        </button>
+          <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
+        <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+
+
+
 <h3 class="review-section-header">Reviews</h3>
 
 

@@ -2,35 +2,31 @@
 
 <h1 class="recipe-topper">Recipes</h1>
   <p class="recipe-topper">Search by Recipe or Ingredient</p>
-<%= form_tag recipes_path, :method => 'get' do %>
-  <p class="recipe-topper">
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+  <%= form_tag recipes_path, :method => 'get' do %>
+    <p class="recipe-topper">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
  <% end %>
 
 
 
 <h2 class="recipe-topper">Searching for: <%= @get_term %></h1>
-<% if (@recipes.nil? or @recipes == []) %>
-<p><h2 class="recipe-topper">No recipes found... Please search again!</h2></p>
-<% else %>
+  <% if (@recipes.nil? or @recipes == []) %>
+    <h2 class="recipe-topper">No recipes found... Please search again!</h2>
+  <% else %>
 
-<table border="1">
- <tr>
- <th>Image</th>
- <th>Name</th>
- </tr>
-
- <% @recipes.each do |recipe| %>
- <tr class=<%= cycle('even', 'odd') %>>
-
- <td class="recipe-image"><%= link_to(image_tag(recipe["image_url"], height: '100', width: '100'), "/recipes/#{recipe["recipe_id"]}")%></td>
- <td class="recipe-title"><%= link_to(recipe["title"], "/recipes/#{recipe["recipe_id"]}") %></td>
-
-
- </tr>
- <% end %>
-
-</table>
-<% end %>
+  <!-- <table border="1">
+   <tr>
+   <th>Image</th>
+   <th>Name</th>
+   </tr> -->
+   <div class="recipe-container">
+    <% @recipes.each do |recipe| %>
+      <div class="recipe-buttons">
+        <div class="recipe-image"><%= link_to(image_tag(recipe["image_url"], height: '100', width: '100'), "/recipes/#{recipe["recipe_id"]}")%></div>
+        <div class="recipe-title"><%= link_to(recipe["title"], "/recipes/#{recipe["recipe_id"]}") %></div>
+      </div>
+    <% end %>
+  <% end %>
+   </div>
