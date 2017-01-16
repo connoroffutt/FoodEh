@@ -68,21 +68,6 @@ html {
   opacity: 1;
 }
 
-// table {
-//   width: 75%;
-//   padding-left: 25%;
-//   border-top: 0;
-//   border-right: 0;
-// }
-
-// .odd {
-//   background-color: rgba(255, 100, 100, 0.8);
-// }
-
-// th {
-//   background-color: rgba(255, 100, 100, 0.8);
-// }
-
 .recipe-image {
   width: 177px;
   height: 100px;
@@ -110,14 +95,6 @@ h2.recipe-topper {
   padding-top: 5px;
   min-width: 100%;
 }
-
-// .add-fav-button {
-//   max-width: 150px;
-// }
-//
-// .add-fav-button:hover {
-//
-// }
 
 .ingredients {
   margin-bottom: 10px;
@@ -176,78 +153,3 @@ button.add-ing {
 .btn {
   background-color: #c62828 !important;;
 }
-
-
-// @media only screen and (max-width: 1100px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   }
-// }
-//
-//
-// @media only screen and (max-width: 900px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   }
-// }
-//
-// @media only screen and (max-width: 800px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   left:  25%;
-//   right: 25%;
-//   }
-// }
-//
-// @media only screen and (max-width: 675px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   left:  22.5%;
-//   right: 22.5%;
-//   }
-// }
-//
-// @media only screen and (max-width: 600px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   left:  20%;
-//   right: 20%;
-//   }
-// }
-//
-// @media only screen and (max-width: 550px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   left:  10%;
-//
-//   }
-// }
-//
-// @media only screen and (max-width: 450px) {
-//
-// .recipe-show img {
-//   width: 400px;
-//   height: 250px;
-//   position: relative;
-//   left:  0%;
-//
-//   }
-// }
