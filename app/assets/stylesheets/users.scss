@@ -84,13 +84,9 @@ h1.map-topper {
 }
 
 .no-favs a {
-  background-color: #c62828;
-  color: white !important;
-  align-items: center !important;
-  position: relative;
-  margin: auto!important;
-  align-items: center !important;
-  border: solid 3px blue;
+  margin: 0;
+  text-align: center;
+  display: block;
 }
 
 .favs-delete {
@@ -107,16 +103,14 @@ h1.map-topper {
 .grocery-list-container {
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-  // border: solid 3px red;
+  width: 50%;
+  margin: auto;
 }
 
 .print-list a {
-  background-color: #c62828;
-  border: solid 3px blue;
-  color: white !important;
-  margin: auto !important;
-  align-items: center !important;
+  margin: 0;
+  text-align: center;
+  display: block;
 }
 
 .edit_ingredient input {
