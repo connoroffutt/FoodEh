@@ -24,7 +24,7 @@
           Signed in as: <%= current_user.first_name %>
         </div>
           <!-- <div class="nav-links-container"> -->
-            <%= link_to "Logout", :logout, method: :post, class: "nav-button" %>
+            <%= link_to "Logout", :logout, method: :post, class: "nav-button", id: "nav-button-logout" %>
             <%= link_to "My Profile", user_path(current_user.id), class: "nav-button" %>
             <%= link_to "Recipe Search", recipes_path, class: "nav-button" %>
             <%= link_to "Cuisines", '/#cuisine-link-target', class: "nav-button" %>
