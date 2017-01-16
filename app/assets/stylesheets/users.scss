@@ -1,6 +1,19 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+label {
+  color: black !important;
+}
+
+.create-account {
+  padding-left: 2%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  display: flex;
+}
+
 h1 {
   font-family: "Avenir Next" !important;
   font-size: 50px;
@@ -169,9 +182,7 @@ li.ingredients-user-page {
   margin-top: 10px;
 }
 
-.create-account {
-  padding-left: 2%;
-}
+
 
 // li {
 //   font: 400 2em/125% 'Sue Ellen Francisco', Helvetica, Sans-serif !important;;
