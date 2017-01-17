@@ -4,7 +4,7 @@
 }
 
 .user-list {
-  background-image: url("fancy_paper.jpg") !important;
+  background: image-url("fancy_paper.jpg") !important;
   max-width: 500px;
   margin-left: 33%;
   min-height: 800px;
