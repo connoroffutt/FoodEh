@@ -31,7 +31,7 @@
 }
 
 .site-header {
-  background: image-url("/assets/backgrounds_for_header/3_pasta.jpeg");
+  background-image: url("/assets/backgrounds_for_header/3_pasta.jpeg");
   height: 500px;
   width: 100%;
   background-size: cover;
