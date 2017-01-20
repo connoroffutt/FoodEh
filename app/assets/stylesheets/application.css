@@ -44,6 +44,11 @@
 
 }
 
+input#user_first_name, input#user_last_name, input#user_email, input#user_password, input#user_password_confirmation {
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 #ffffff;
+}
+
 input#search {
   border-bottom: 1px solid red;
   position: relative;

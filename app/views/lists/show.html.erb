@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" />
 
   <head>
     <%= stylesheet_link_tag 'lists' %>
@@ -16,9 +16,9 @@
        <% elsif current_user.list.ingredients.empty? %>
           <%= "No Ingredients Selected." %>
        <% else %>
-       <% current_user.list.ingredients.each do |ingredient| %>
-         <li class="ingredients-user-page">  &#9633;  <%= ingredient.description %>
-       <% end %>
+         <% current_user.list.ingredients.each do |ingredient| %>
+           <li class="ingredients-user-page">  &#9633;  <%= ingredient.description %>
+         <% end %>
        <% end %>
    </div>
 
