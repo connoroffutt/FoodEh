@@ -21,10 +21,15 @@
 }
 
 .video-searchbar-header input {
-  background-color: none;
   position: absolute;
   top: 67.5%;
   left: 45%;
+  border: none;
+  background: #c62828;
+  color: white !important;
+  text-transform: uppercase;
+  padding: 7px;
+  border-radius: 7px;
 }
 
 .video-searchbar-header input#search {
@@ -63,10 +68,13 @@
   transition: all 0.3s ease-in-out;
   position: relative;
   display: inline-block;
+  text-align: center;
+  align-items: center;
 }
 
 .cuisine-name a {
   color: black !important;
+  text-align: center;
 }
 
 .cuisinebuttons::after {
@@ -97,8 +105,9 @@ img {
 
 .cuisine-image {
   padding: 5px 5px;
-  width: 350px;
-  max-height: 100%;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
   display: inline-block;
   margin-top: 10px;
   position: relative;

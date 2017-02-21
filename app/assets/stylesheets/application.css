@@ -219,6 +219,11 @@ a.modal-action {
   flex-wrap: wrap;
 }
 
+.hover-btn-layer {
+  /*background: #c62828;*/
+  opacity: 0.5;
+}
+
 
 @media only screen and (max-width: 785px) {
 
