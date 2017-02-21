@@ -6,8 +6,23 @@ html {
   overflow-x: hidden;
 }
 
+input#search_btn {
+  border: none;
+  background: #c62828;
+  color: white !important;
+  text-transform: uppercase;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+input#search {
+  color: grey !important;
+  text-shadow: white !important;
+}
+
 .recipe-title a {
-  color: black !important;;
+  color: black !important;
+  text-transform: capitalize;
 }
 
 .recipe-instructions {
@@ -18,7 +33,6 @@ html {
   background: none;
 }
 
-
 .recipe-container {
   width: 75%;
   display: flex;
@@ -28,6 +42,10 @@ html {
   margin: auto
 }
 
+img {
+  width: 250px;
+  height: auto;
+}
 
 .recipe-buttons {
   padding-bottom: 2%;
@@ -59,7 +77,6 @@ html {
   margin: auto
 }
 
-
 .recipe-buttons:hover {
   transform: scale(1.2, 1.2);
 }
@@ -69,8 +86,9 @@ html {
 }
 
 .recipe-image {
-  width: 177px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
 }
 
 .recipe-name-showpage {
