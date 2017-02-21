@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <% console %>
     <div class="logo"><img src="/assets/FoodEh_Logo_no_bg.png" class="logo-pic" alt="logo-pic"></div>
 
     <nav class="site-nav">
@@ -30,7 +31,9 @@
             <%= link_to "Cuisines", '/#cuisine-link-target', class: "nav-button" %>
           <!-- </div> -->
       <% else %>
+      <a href="/">
         <img src="/assets/FoodEh_Logo.png", class="nav-logo-pic" alt="nav-logo-pic">
+      </a>
         <!-- <%= link_to "Sign Up", new_user_path, class: "nav-button" %> -->
         <button id="login-button" class="waves-effect waves-light btn modal-trigger N/A transparent" data-target="modal1">Login</button>
 

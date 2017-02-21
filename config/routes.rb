@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :reviews, only: [:show, :create, :destroy]
   end
 
+  resources :lists do
+    get
+  end
 
 
   get 'login' => 'user_sessions#new', :as => :login
@@ -26,6 +29,6 @@ Rails.application.routes.draw do
   get 'lists/show'
   post '/list/add' => 'lists#add', :as => :list_add
   delete '/list/:ingredient_id' => 'lists#destroy_ingredient', :as => :list_destroy_ingredient
-
+  delete '/list/:list_id' => 'lists#destroy', :as => :list_destroy
 
 end

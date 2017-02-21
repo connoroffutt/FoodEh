@@ -120,6 +120,15 @@ h1.map-topper {
   border: none;
 }
 
+.edit_ingredients input {
+  min-width: 50px;
+  min-height: 40px;
+  background: image-url('delete-icon.png');
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border: none;
+}
+
 .user-list {
   position: relative;
   width: 45%;
@@ -167,4 +176,10 @@ li.ingredients-user-page {
   overflow: hidden;
   left: 35%;
   margin-top: 10px;
+}
+
+.grocery-list a  {
+  position: relative;
+  left: 40%;
+  right: 40%;
 }

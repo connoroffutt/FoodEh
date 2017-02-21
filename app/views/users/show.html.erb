@@ -51,12 +51,15 @@
             <%= f.hidden_field(:ingredient_id, value: ingredient.id)%></li>
             <% end %>
         <% end %>
+        <% link_to current_user.list %>
+        <%= link_to "Delete Grocery List", @current_user.list, method: :delete,
+                                data: { confirm: "Are you sure you would like to delete this list?"  } %>
       <% end %>
     </div>
   </div>
 
   <div class="print-list">
-    <a href="/lists/show">Print Your Grocery List!</a>
+    <a href="/lists/show">Print Your Grocery List</a>
   </div>
 
 

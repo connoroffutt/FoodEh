@@ -10,6 +10,12 @@ class ListsController < ApplicationController
     list.ingredients.delete(ingredient)
   end
 
+  def destroy
+    current_user.list.destroy
+    flash[:success] = "List Deleted."
+    redirect_to user_path
+  end
+
   def show
     list = List.find_by(user: current_user)
     render :layout => false
