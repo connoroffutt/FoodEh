@@ -18,9 +18,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:show, :create, :destroy]
   end
 
-  resources :lists do
-    get
-  end
+  resources :lists
 
 
   get 'login' => 'user_sessions#new', :as => :login
