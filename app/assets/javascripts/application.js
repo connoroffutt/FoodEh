@@ -42,22 +42,16 @@ $(document).ready(function($) {
 
   // $('.cuisine-name').hide();
 
-  $('.cuisinebuttons').hover(function() {
-    $(this).addClass('hover-btn-layer');
-  }, function() {
-    $(this).removeClass('hover-btn-layer');
-  });
-
-  $('.recipe-buttons').hover(function() {
-    $(this).addClass('hover-btn-layer');
-  }, function() {
-    $(this).removeClass('hover-btn-layer');
-  });
+  // $('.cuisinebuttons').hover(function() {
+  //   $(this).addClass('hover-btn-layer');
+  // }, function() {
+  //   $(this).removeClass('hover-btn-layer');
+  // });
+  //
+  // $('.recipe-buttons').hover(function() {
+  //   $(this).addClass('hover-btn-layer');
+  // }, function() {
+  //   $(this).removeClass('hover-btn-layer');
+  // });
 
 });
-//
-// $('#1').hover(function () {
-//     $('#2').addClass('blur');
-// }, function () {
-//     $('#2').removeClass('blur');
-// });

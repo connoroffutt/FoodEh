@@ -26,7 +26,7 @@
   <div class="fav-recipes-container">
     <div class="fav-recipes">
       <% current_user.favorites.each do |favorite| %>
-       <%= link_to favorite.recipe.name, favorite_path(favorite.id)%>
+       <%= link_to favorite.recipe.name, favorite_path(favorite.id), :id => "fav-recipe-title" %>
        <%= link_to 'Remove from favorites', favorite_path(favorite.id), method: :delete, class: "favs-delete" %>
       <% end %>
     </div>
@@ -52,8 +52,8 @@
             <% end %>
         <% end %>
         <% link_to current_user.list %>
-        <%= link_to "Delete Grocery List", @current_user.list, method: :delete,
-                                data: { confirm: "Are you sure you would like to delete this list?"  } %>
+        <%= button_to "Delete Grocery List", @current_user.list, method: :delete,
+                                data: { confirm: "Are you sure you would like to delete this list?"  }, :id => "delete-list" %>
       <% end %>
     </div>
   </div>
