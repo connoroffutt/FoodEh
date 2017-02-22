@@ -77,19 +77,26 @@ h1.map-topper {
   width: 250px;
   height: auto;
   display: block;
-  font-size: 20px;
   text-transform: capitalize;
+}
+
+a#fav-recipe-title {
+  font-size: 20px !important;
 }
 
 .no-favs a {
   margin: 0;
   text-align: center;
   display: block;
+  padding: 5px;
 }
 
 .favs-delete {
   background-color: #c62828;
   color: white !important;
+  padding: 7px;
+  border-radius: 7px;
+  font-size: 15px;
 }
 
 .grocery-list-title {
@@ -105,10 +112,24 @@ h1.map-topper {
   margin: auto;
 }
 
+input#delete-list {
+  margin: 0;
+  text-align: center;
+  display: block;
+  background-color: #c62828;
+  color: white !important;
+  padding: 7px;
+  border-radius: 7px;
+  font-size: 15px;
+  border: none;
+  margin: auto;
+}
+
 .print-list a {
   margin: 0;
   text-align: center;
   display: block;
+  padding: 10px;
 }
 
 .edit_ingredient input {
@@ -176,10 +197,4 @@ li.ingredients-user-page {
   overflow: hidden;
   left: 35%;
   margin-top: 10px;
-}
-
-.grocery-list a  {
-  position: relative;
-  left: 40%;
-  right: 40%;
 }
